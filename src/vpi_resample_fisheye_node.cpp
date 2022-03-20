@@ -1,4 +1,7 @@
 
+#define BACKWARD_HAS_DW 1
+#include <backward.hpp>
+
 // C++ std.
 // #include <filesystem> // Not supported by GCC 7.
 #include <iostream>
@@ -38,6 +41,10 @@
 // Namespace.
 // namespace fs = std::filesystem;
 namespace fs = boost::filesystem;
+
+namespace backward {
+backward::SignalHandling sh;
+} // namespace backward
 
 constexpr const auto PI = boost::math::constants::pi<double>();
 
@@ -124,6 +131,8 @@ static
 void populate_vpi_warp_map( const cv::Mat& xx, const cv::Mat& yy, VPIWarpMap& vpi_warp_map ) {
     const int W = xx.cols;
     const int H = xx.rows;
+
+    std::cout << "populat4e_vpi_warp_map: W = " << W << ", H = " << H << "\n";
     
     std::memset( &vpi_warp_map, 0, sizeof(vpi_warp_map) );
     vpi_warp_map.grid.numHorizRegions  = 1;

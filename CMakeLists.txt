@@ -33,6 +33,8 @@ endif()
 
 find_package(yaml-cpp REQUIRED)
 
+find_package(Backward REQUIRED)
+
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
@@ -179,6 +181,7 @@ target_link_libraries(${PROJECT_NAME}_node
   ${OpenCV_LIBRARIES}
   Eigen3::Eigen
   ${LIB_MVS}
+  Backward::Backward
 )
 
 #############
