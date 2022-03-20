@@ -1,0 +1,21 @@
+<launch>
+    
+  <arg name="calib_fn" default="$(find vpi_resample_fisheye)/calib/kalibr.yaml" />
+  <arg name="cam_idx" default="0" />
+  <arg name="out_size" default="300, 200" />
+  <arg name="out_fov" default="90, 40" />
+
+  <node name="vpi_resample_fisheye_node_0" 
+        pkg="vpi_resample_fisheye" 
+        type="vpi_resample_fisheye_node" 
+        output="screen" 
+        launch-prefix="gdb --args">
+
+    <param name="calib_fn" type="str" value="$(arg calib_fn)" />
+    <param name="cam_idx" type="int" value="$(arg cam_idx)" />
+    <param name="out_size" type="str" value="$(arg out_size)" />
+    <param name="out_fov" type="str" value="$(arg out_fov)" />
+
+    <param name="backend_type" type="str" value="cuda" />
+  </node>
+</launch>
