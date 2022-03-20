@@ -121,26 +121,6 @@ mvs::PointMat3 get_xyz(double fov_x, double fov_y, const mvs::Shape_t& shape) {
 }
 
 static
-void create_single_vpi_image(int w, int h, const VPIImageFormat& type) {
-    // Empty function.
-}
-
-template< typename VPIImage_t, typename... VPIImage_vt >
-void create_single_vpi_image(int w, int h, const VPIImageFormat& type, VPIImage_t& vpi_image, VPIImage_vt& ... out) {
-    vpiImageCreate(w, h, type, 0, &vpi_image);
-    create_single_vpi_image(w, h, type, out...);
-}
-
-template< typename ...VPIImage_vt >
-void create_vpi_image_by_copy_type(int w, int h, const VPIImage& copy_type_from, VPIImage_vt& ... out) {
-    VPIImageFormat vpi_type;
-    vpiImageGetFormat( copy_type_from, &vpi_type );
-
-    // Unpack the parameter pack by recursive calls.
-    create_single_vpi_image(w, h, vpi_type, out...);
-}
-
-static
 void populate_vpi_warp_map( const cv::Mat& xx, const cv::Mat& yy, VPIWarpMap& vpi_warp_map ) {
     const int W = xx.cols;
     const int H = xx.rows;
@@ -403,9 +383,12 @@ int main(int argc, char** argv) {
 
     // Set re-sample rotation.
     Eigen::Matrix3f rot_mat = Eigen::Matrix3f::Zero();
-    rot_mat(0, 0) = -1;
-    rot_mat(1, 2) = -1;
-    rot_mat(2, 1) = -1;
+    rot_mat(0, 0) = 1;
+    rot_mat(1, 1) = 1;
+    rot_mat(2, 2) = 1;
+    // rot_mat(0, 0) = -1;
+    // rot_mat(1, 2) = -1;
+    // rot_mat(2, 1) = -1;
     // rot_mat(0, 0) = -1;
     // rot_mat(1, 1) = -1;
     // rot_mat(2, 2) =  1;
@@ -419,13 +402,12 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-     ros::Rate loop_rate(60);
+    ros::Rate loop_rate(60);
 
     // Do our own spin loop
     while (!g_request_shutdown)
     {
         // Do non-callback stuff
-
         ros::spinOnce();
         loop_rate.sleep();
     }
