@@ -9,7 +9,7 @@
         pkg="vpi_resample_fisheye" 
         type="vpi_resample_fisheye_node" 
         output="screen" 
-        launch-prefix="gdb --args">
+        disable-launch-prefix="gdb --args">
 
     <param name="calib_fn" type="str" value="$(arg calib_fn)" />
     <param name="cam_idx" type="int" value="$(arg cam_idx)" />
