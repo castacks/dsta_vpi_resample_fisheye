@@ -22,6 +22,7 @@ public:
 
     DoubleSphere parser_camera_node(
         YAML::Node&& node,
+        const std::string& name,
         const TransformMat& previous_chain_pose = TransformMat::Identity()
     ) const ;
 

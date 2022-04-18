@@ -10,6 +10,9 @@
 #include <string>
 #include <vector>
 
+#include <thread>
+#include <mutex>
+
 #include <signal.h>
 
 // System.
@@ -47,6 +50,9 @@ backward::SignalHandling sh;
 } // namespace backward
 
 constexpr const auto PI = boost::math::constants::pi<double>();
+
+// Global mutex.
+std::mutex g_lock;
 
 // Signal-safe flag for whether shutdown is requested
 sig_atomic_t volatile g_request_shutdown = 0;
@@ -127,32 +133,6 @@ mvs::PointMat3 get_xyz(double fov_x, double fov_y, const mvs::Shape_t& shape) {
     return xyz;
 }
 
-static
-void populate_vpi_warp_map( const cv::Mat& xx, const cv::Mat& yy, VPIWarpMap& vpi_warp_map ) {
-    const int W = xx.cols;
-    const int H = xx.rows;
-
-    std::cout << "populat4e_vpi_warp_map: W = " << W << ", H = " << H << "\n";
-    
-    std::memset( &vpi_warp_map, 0, sizeof(vpi_warp_map) );
-    vpi_warp_map.grid.numHorizRegions  = 1;
-    vpi_warp_map.grid.numVertRegions   = 1;
-    vpi_warp_map.grid.regionWidth[0]   = W;
-    vpi_warp_map.grid.regionHeight[0]  = H;
-    vpi_warp_map.grid.horizInterval[0] = 1;
-    vpi_warp_map.grid.vertInterval[0]  = 1;
-    vpiWarpMapAllocData(&vpi_warp_map);
-
-    vpiWarpMapGenerateIdentity(&vpi_warp_map);
-    for ( int i = 0; i < vpi_warp_map.numVertPoints; ++i ) {
-        VPIKeypoint* row = ( VPIKeypoint* ) ( ( std::uint8_t* ) vpi_warp_map.keypoints + vpi_warp_map.pitchBytes * i );
-        for ( int j = 0; j < vpi_warp_map.numHorizPoints; ++j ) {
-            row[j].x = xx.at<float>( i, j );
-            row[j].y = yy.at<float>( i, j );
-        }
-    }
-}
-
 std::vector<mvs::DoubleSphere> read_cameras(
     const std::string& yaml_fn ) {
     
@@ -160,9 +140,9 @@ std::vector<mvs::DoubleSphere> read_cameras(
 
     mvs::KalibrParser parser;
     
-    mvs::DoubleSphere cam0 = parser.parser_camera_node(calib["cam0"]);
-    mvs::DoubleSphere cam1 = parser.parser_camera_node(calib["cam1"]);
-    mvs::DoubleSphere cam2 = parser.parser_camera_node(calib["cam2"], cam1.extrinsics);
+    mvs::DoubleSphere cam0 = parser.parser_camera_node(calib["cam0"], "cam0");
+    mvs::DoubleSphere cam1 = parser.parser_camera_node(calib["cam1"], "cam1");
+    mvs::DoubleSphere cam2 = parser.parser_camera_node(calib["cam2"], "cam2", cam1.extrinsics);
 
     return { cam0, cam1, cam2 }; // Did I just make a copy?
 }
@@ -186,13 +166,13 @@ public:
         active_width  = 0;
         active_height = 0;
 
-        // Create the subscriber.
-        GET_PARAM_DEFAULT(std::string, in_topic, "/camera_0/image_raw", nh_private_)
-        sub_fisheye = nh_.subscribe(in_topic, PUB_BUF_LEN, &FisheyeResampler::imageCallback, this);
+        // // Create the subscriber.
+        // GET_PARAM_DEFAULT(std::string, in_topic, "/camera_0/image_raw", nh_private_)
+        // sub_fisheye = nh_.subscribe(in_topic, PUB_BUF_LEN, &FisheyeResampler::imageCallback, this);
 
-        // Create the publisher.
-        GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/image_raw", nh_private_)
-        pub_resampled = nh_.advertise<sensor_msgs::Image>(out_topic, SUB_BUF_LEN);
+        // // Create the publisher.
+        // GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/image_raw", nh_private_)
+        // pub_resampled = nh_.advertise<sensor_msgs::Image>(out_topic, SUB_BUF_LEN);
     }
 
     ~FisheyeResampler() {
@@ -218,11 +198,12 @@ public:
     }
     void set_rotation(const Eigen::Matrix3f& r) { R = r; }
 
-    void prepare();
+    void prepare(ros::NodeHandle &nh_, ros::NodeHandle &nh_private_);
     void destroyResources();
 
 protected:
     void get_remap_coordinates();
+    void populate_vpi_warp_map( const cv::Mat& xx, const cv::Mat& yy, VPIWarpMap* vpi_warp_map );
     void setData(cv_bridge::CvImagePtr _cv_ptr);
     void vpi_submit();
     void processImage(cv_bridge::CvImagePtr& _cv_ptr) {
@@ -234,10 +215,11 @@ public:
     const int PUB_BUF_LEN = 1000;
     const int SUB_BUF_LEN = 1000;
 
-private:
+public:
     ros::Subscriber sub_fisheye;
     ros::Publisher pub_resampled;
 
+private:
     CameraModel_t* p_cam_model;
 
     Shape_t out_shape;
@@ -250,7 +232,7 @@ private:
     cv::Mat yy;
 
     // VPI stuff.
-    VPIContext ctx;
+    // VPIContext ctx;
     VPIImage v_out_image;
     VPIWarpMap v_warp_map;
     VPIPayload v_warp;
@@ -262,23 +244,62 @@ public:
 };
 
 template < typename CameraModel_t >
-void FisheyeResampler<CameraModel_t>::prepare() {
+void FisheyeResampler<CameraModel_t>::populate_vpi_warp_map( const cv::Mat& xx, const cv::Mat& yy, VPIWarpMap* vpi_warp_map ) {
+    const int W = xx.cols;
+    const int H = xx.rows;
+
+    std::lock_guard<std::mutex> lock(g_lock);
+
+    std::cout << "populat4e_vpi_warp_map: W = " << W << ", H = " << H << "\n";
+    
+    std::memset( vpi_warp_map, 0, sizeof(*vpi_warp_map) );
+    vpi_warp_map->grid.numHorizRegions  = 1;
+    vpi_warp_map->grid.numVertRegions   = 1;
+    vpi_warp_map->grid.regionWidth[0]   = W;
+    vpi_warp_map->grid.regionHeight[0]  = H;
+    vpi_warp_map->grid.horizInterval[0] = 1;
+    vpi_warp_map->grid.vertInterval[0]  = 1;
+    vpiWarpMapAllocData(vpi_warp_map);
+
+    ROS_INFO_STREAM("populate_vpi_warp_map: after vpiWarpMapAllocData(). ");
+
+    // Sync.
+    vpiStreamSync(stream);
+
+    vpiWarpMapGenerateIdentity(vpi_warp_map);
+    ROS_INFO_STREAM("populate_vpi_warp_map: after vpiWarpMapGenerateIdentity(). ");
+    for ( int i = 0; i < vpi_warp_map->numVertPoints; ++i ) {
+        VPIKeypoint* row = ( VPIKeypoint* ) ( ( std::uint8_t* ) vpi_warp_map->keypoints + vpi_warp_map->pitchBytes * i );
+        for ( int j = 0; j < vpi_warp_map->numHorizPoints; ++j ) {
+            row[j].x = xx.at<float>( i, j );
+            row[j].y = yy.at<float>( i, j );
+        }
+    }
+}
+
+template < typename CameraModel_t >
+void FisheyeResampler<CameraModel_t>::prepare(ros::NodeHandle &nh_, ros::NodeHandle &nh_private_) {
     if ( !p_cam_model ) {
         std::string s = "p_cam_model is null. ";
         ROS_ERROR_STREAM(s);
         throw std::runtime_error(s);
     }
     
+    ROS_INFO_STREAM("In prepare(). ");
     get_remap_coordinates();
+    ROS_INFO_STREAM("After get_remap_coordinates(). ");
 
     // // VPI context.
     // vpiContextCreate(0, &ctx);
     // vpiContextSetCurrent(ctx);
 
     vpiImageCreate(out_shape.w, out_shape.h, VPI_IMAGE_FORMAT_BGR8, 0, &v_out_image);
+    ROS_INFO_STREAM("After vpiImageCreate(). ");
 
-    populate_vpi_warp_map(xx, yy, v_warp_map);
+    populate_vpi_warp_map(xx, yy, &v_warp_map);
+    ROS_INFO_STREAM("After populate_vpi_warp_map(). ");
     vpiCreateRemap( backendType, &v_warp_map, &v_warp );
+    ROS_INFO_STREAM("After vpiCreateRemap(). ");
 
     prepared = true;
 }
@@ -371,6 +392,10 @@ int main(int argc, char** argv) {
     auto v_out_size = extract_number_from_string<int>( out_size, 2 );
     auto v_out_fov  = extract_number_from_string<double>( out_fov, 2 );
 
+    VPIContext ctx;
+    vpiContextCreate(0, &ctx);
+    vpiContextSetCurrent(ctx);
+
     // Create the resampler.
     mvs::FisheyeResampler<mvs::DoubleSphere> resampler(nh_, nh_private_);
 
@@ -405,11 +430,21 @@ int main(int argc, char** argv) {
     resampler.set_rotation(rot_mat);
 
     try {
-        resampler.prepare();
+        resampler.prepare(nh_, nh_private_);
     } catch (std::exception& exc) {
         ROS_ERROR_STREAM("Exception catched during resampler.prepare(): " << exc.what());
         return -1;
     }
+
+    // // Create the subscriber.
+    // GET_PARAM_DEFAULT(std::string, in_topic, "/camera_0/image_raw", nh_private_)
+    // resampler.sub_fisheye = nh_.subscribe(in_topic, resampler.PUB_BUF_LEN, &mvs::FisheyeResampler<mvs::DoubleSphere>::imageCallback, &resampler);
+
+    // // Create the publisher.
+    // GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/image_raw", nh_private_)
+    // resampler.pub_resampled = nh_.advertise<sensor_msgs::Image>(out_topic, resampler.SUB_BUF_LEN);
+
+    ROS_INFO_STREAM("Prepared. ");
 
     ros::Rate loop_rate(60);
 
@@ -420,6 +455,8 @@ int main(int argc, char** argv) {
         ros::spinOnce();
         loop_rate.sleep();
     }
+
+    vpiContextDestroy(ctx);
 
     ros::shutdown();
 

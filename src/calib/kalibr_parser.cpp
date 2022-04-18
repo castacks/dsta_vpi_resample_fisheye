@@ -15,7 +15,8 @@ using namespace mvs;
 
 DoubleSphere KalibrParser::parser_camera_node(
     YAML::Node&& node,
-    const TransformMat& previous_chain_pose ) const {
+    const std::string& name,
+    const TransformMat& previous_chain_pose) const {
     
     typedef TransformMat::Scalar Scalar_T;
 
@@ -28,7 +29,6 @@ DoubleSphere KalibrParser::parser_camera_node(
     auto cy    = intrinsics[5].as<Scalar_T>();
     auto h     = node[KALIBR_RESOLUTION][1].as<int>();
     auto w     = node[KALIBR_RESOLUTION][0].as<int>();
-    auto name  = node[KALIBR_ROSTOPIC].as<std::string>();
     DoubleSphere camera(name, xi, alpha, fx, fy, cx, cy, {h, w});
 
     if ( node[KALIBR_EXTRINSICS] ) {
@@ -43,6 +43,8 @@ DoubleSphere KalibrParser::parser_camera_node(
     camera.extrinsics = inverse_transform( camera.extrinsics );
 
     camera.extrinsics = previous_chain_pose * camera.extrinsics.eval();
+
+    camera.topic_name = node[KALIBR_ROSTOPIC].as<std::string>();
 
     return camera;
 }

@@ -20,7 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED COMPONENTS system filesystem)
-find_package(vpi 1.0 REQUIRED)
+find_package(vpi REQUIRED)
 find_package(OpenCV 4 REQUIRED)
 
 message(STATUS "OpenCV_DIR=${OpenCV_DIR}")
@@ -121,9 +121,9 @@ find_package(Backward REQUIRED)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES vpi_resample_fisheye
-#  CATKIN_DEPENDS cv_bridge roscpp std_msgs
+ INCLUDE_DIRS include
+ LIBRARIES dsta_resample
+ CATKIN_DEPENDS cv_bridge roscpp std_msgs
 #  DEPENDS system_lib
 )
 
@@ -139,8 +139,8 @@ include_directories(
 )
 
 # Declare a C++ library
-set(LIB_MVS mvs)
-add_library(${LIB_MVS} 
+set(LIB_RESAMPLE dsta_resample)
+add_library(${LIB_RESAMPLE} 
   src/camera_model/camera_model_base.cpp
   src/camera_model/double_sphere.cpp
   src/calib/kalibr_parser.cpp
@@ -156,6 +156,8 @@ add_library(${LIB_MVS}
 # The recommended prefix ensures that target names across packages don't collide
 add_executable(${PROJECT_NAME}_node src/vpi_resample_fisheye_node.cpp)
 
+add_executable(${PROJECT_NAME}_node_no_fancy src/vpi_resample_no_fancy.cpp)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -168,7 +170,7 @@ add_executable(${PROJECT_NAME}_node src/vpi_resample_fisheye_node.cpp)
 
 # Specify libraries to link a library or executable target against
 
-target_link_libraries(${LIB_MVS}
+target_link_libraries(${LIB_RESAMPLE}
     yaml-cpp
     Eigen3::Eigen
     ${OpenCV_LIBRARIES})
@@ -180,7 +182,18 @@ target_link_libraries(${PROJECT_NAME}_node
   vpi 
   ${OpenCV_LIBRARIES}
   Eigen3::Eigen
-  ${LIB_MVS}
+  ${LIB_RESAMPLE}
+  Backward::Backward
+)
+
+target_link_libraries(${PROJECT_NAME}_node_no_fancy
+  ${catkin_LIBRARIES}
+  ${Boost_SYSTEM_LIBRARY}
+  ${Boost_FILESYSTEM_LIBRARY}
+  vpi 
+  ${OpenCV_LIBRARIES}
+  Eigen3::Eigen
+  ${LIB_RESAMPLE}
   Backward::Backward
 )
 
@@ -204,20 +217,20 @@ target_link_libraries(${PROJECT_NAME}_node
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
-# # Mark libraries for installation
-# # See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_libraries.html
-# install(TARGETS ${PROJECT_NAME}
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
-# )
+# Mark libraries for installation
+# See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_libraries.html
+install(TARGETS ${LIB_RESAMPLE}
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
+)
 
-## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN "*.h"
-#   PATTERN ".svn" EXCLUDE
-# )
+# Mark cpp header files for installation
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.hpp"
+  PATTERN ".svn" EXCLUDE
+)
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES

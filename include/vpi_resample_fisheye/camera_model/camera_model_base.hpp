@@ -5,6 +5,7 @@
 #include <string>
 
 #include <Eigen/Dense>
+#include <Eigen/Geometry>
 
 #include <opencv2/imgproc.hpp>
 
@@ -17,8 +18,12 @@ typedef Eigen::Matrix<float, 3, Eigen::Dynamic> PointMat3;
 typedef Eigen::Matrix<std::uint8_t, 1, Eigen::Dynamic> PointMask;
 
 typedef Eigen::Matrix<float, 4, 4> TransformMat;
+typedef Eigen::Matrix<float, 3, 3> RotationMat;
+typedef Eigen::Quaternion<float> Quat;
 
 TransformMat inverse_transform( const TransformMat& T );
+
+Quat ypr_2_quat(float y, float p, float r);
 
 struct Shape_t {    
     Shape_t(int H, int W)
@@ -62,6 +67,7 @@ public:
 
 public:
     std::string name;
+    std::string topic_name;
     float fx;
     float fy;
     float cx;
