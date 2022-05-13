@@ -325,8 +325,13 @@ void FisheyeResampler<CameraModel_t>::get_remap_coordinates() {
     auto [ ux, uy ] = p_cam_model->project_3d_2_image_plane_separated( xyz );
 
     // Convert uxuy to cv::Mat.
-    xx = cv::Mat( out_shape.h, out_shape.w, CV_32FC1, ux.data() );
-    yy = cv::Mat( out_shape.h, out_shape.w, CV_32FC1, uy.data() );
+    // // The following may cause a memory error since ux and uy will be destroyed
+    // // when the end of the function is reached.
+    // xx = cv::Mat( out_shape.h, out_shape.w, CV_32FC1, ux.data() );
+    // yy = cv::Mat( out_shape.h, out_shape.w, CV_32FC1, uy.data() );
+    // Copy to xx and yy.
+    cv::Mat( out_shape.h, out_shape.w, CV_32FC1, ux.data() ).copyTo(xx);
+    cv::Mat( out_shape.h, out_shape.w, CV_32FC1, uy.data() ).copyTo(yy);
 }
 
 template < typename CameraModel_t >
@@ -436,13 +441,13 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    // // Create the subscriber.
-    // GET_PARAM_DEFAULT(std::string, in_topic, "/camera_0/image_raw", nh_private_)
-    // resampler.sub_fisheye = nh_.subscribe(in_topic, resampler.PUB_BUF_LEN, &mvs::FisheyeResampler<mvs::DoubleSphere>::imageCallback, &resampler);
+    // Create the subscriber.
+    GET_PARAM_DEFAULT(std::string, in_topic, "/camera_0/image_raw", nh_private_)
+    resampler.sub_fisheye = nh_.subscribe(in_topic, resampler.PUB_BUF_LEN, &mvs::FisheyeResampler<mvs::DoubleSphere>::imageCallback, &resampler);
 
-    // // Create the publisher.
-    // GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/image_raw", nh_private_)
-    // resampler.pub_resampled = nh_.advertise<sensor_msgs::Image>(out_topic, resampler.SUB_BUF_LEN);
+    // Create the publisher.
+    GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/image_raw", nh_private_)
+    resampler.pub_resampled = nh_.advertise<sensor_msgs::Image>(out_topic, resampler.SUB_BUF_LEN);
 
     ROS_INFO_STREAM("Prepared. ");
 
