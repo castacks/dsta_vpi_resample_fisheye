@@ -1,6 +1,5 @@
 
 #define BACKWARD_HAS_DW 1
-#include <backward.hpp>
 
 // C++ std.
 // #include <filesystem> // Not supported by GCC 7.
@@ -45,9 +44,6 @@
 // namespace fs = std::filesystem;
 namespace fs = boost::filesystem;
 
-namespace backward {
-backward::SignalHandling sh;
-} // namespace backward
 
 constexpr const auto PI = boost::math::constants::pi<double>();
 
@@ -108,27 +104,32 @@ mvs::PointMat3 get_xyz(double fov_x, double fov_y, const mvs::Shape_t& shape) {
     
     // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
     mvs::PointMat1 ax = 
-        mvs::PointMat1::LinSpaced(shape.w, -1, 1) * static_cast<Scalar_t>( fov_x / 2.0 / 180 * PI );
+        mvs::PointMat1::LinSpaced(shape.w, -1, 1) * static_cast<Scalar_t>( tan(fov_x / 2.0 / 180 * PI) );
     mvs::PointMat1 ay = 
-        mvs::PointMat1::LinSpaced(shape.h, -1, 1) * static_cast<Scalar_t>( fov_y / 2.0 / 180 * PI );
+        mvs::PointMat1::LinSpaced(shape.h, -1, 1) * static_cast<Scalar_t>( tan(fov_y / 2.0 / 180 * PI) );
 
     // The xyz coordinates of pixels in the pinhole camera.
     mvs::PointMat3 xyz;
     xyz.resize( 3, N );
 
     xyz.row(0) = 
-        ax.array().tan().matrix().replicate( 1, shape.h );
+        ax.array().matrix().replicate( 1, shape.h );
     // Eigen 3.4.
     // xyz.row(1) = 
     //     ay.array().tan().matrix().replicate( shape.w, 1 ).reshaped(1, N);
 
     // Eigen 3.3.
     Eigen::Matrix<Scalar_t, Eigen::Dynamic, Eigen::Dynamic> temp_row = 
-        ay.array().tan().matrix().replicate( shape.w, 1 );
+        ay.array().matrix().replicate( shape.w, 1 );
     xyz.row(1) = Eigen::Map<Eigen::Matrix<Scalar_t, 1, Eigen::Dynamic>>( 
         temp_row.data(), 1, N
     );
+    
     xyz.row(2) = mvs::PointMat1::Ones(1, N);
+    // xyz.row(2).setZero();
+    // xyz.row(2) = (mvs::PointMat1::Ones(1, N)- xyz.colwise().squaredNorm());
+    // xyz.row(2) = xyz.row(2).colwise().norm();
+
 
     return xyz;
 }
@@ -166,13 +167,7 @@ public:
         active_width  = 0;
         active_height = 0;
 
-        // // Create the subscriber.
-        // GET_PARAM_DEFAULT(std::string, in_topic, "/camera_0/image_raw", nh_private_)
-        // sub_fisheye = nh_.subscribe(in_topic, PUB_BUF_LEN, &FisheyeResampler::imageCallback, this);
 
-        // // Create the publisher.
-        // GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/image_raw", nh_private_)
-        // pub_resampled = nh_.advertise<sensor_msgs::Image>(out_topic, SUB_BUF_LEN);
     }
 
     ~FisheyeResampler() {
@@ -394,6 +389,28 @@ int main(int argc, char** argv) {
     GET_PARAM_DEFAULT(std::string, out_size, "300, 200",    nh_private_) // Width, height.
     GET_PARAM_DEFAULT(std::string, out_fov,  "90, 40",      nh_private_) // x, y.
 
+    // Find calibration file name to use when publishing
+    std::string topic_name("");
+    std::string character;
+    bool found_point = false;
+    for (int i = calib_fn.length()-1; i>=0; i--)
+    {
+        character = calib_fn[i];
+        if (character.compare("/") == 0)
+        {
+            break;
+        }
+        else if ( found_point)
+        {
+            topic_name.push_back(calib_fn[i]);
+        }
+        else if (character.compare(".")==0)
+        {
+            found_point = true;
+        }
+    }
+    reverse(topic_name.begin(),topic_name.end());
+
     auto v_out_size = extract_number_from_string<int>( out_size, 2 );
     auto v_out_fov  = extract_number_from_string<double>( out_fov, 2 );
 
@@ -446,7 +463,7 @@ int main(int argc, char** argv) {
     resampler.sub_fisheye = nh_.subscribe(in_topic, resampler.PUB_BUF_LEN, &mvs::FisheyeResampler<mvs::DoubleSphere>::imageCallback, &resampler);
 
     // Create the publisher.
-    GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/image_raw", nh_private_)
+    GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/"+topic_name, nh_private_)
     resampler.pub_resampled = nh_.advertise<sensor_msgs::Image>(out_topic, resampler.SUB_BUF_LEN);
 
     ROS_INFO_STREAM("Prepared. ");
