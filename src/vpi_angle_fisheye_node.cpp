@@ -21,7 +21,10 @@
 #include <Eigen/Dense>
 
 #include "vpi_processor.h"
+
+#ifdef WITH_OCV_VIZ
 #include <opencv2/viz.hpp>
+#endif
 
 // // OpenCV.
 // #include <opencv2/opencv.hpp>
@@ -133,7 +136,7 @@ mvs::PointMat3 get_xyz(double fov_x, double fov_y, const mvs::Shape_t& shape) {
 
     xyz.row(2) = yy.array().cos().matrix();
     
-
+#ifdef WITH_OCV_VIZ
     cv::viz::Viz3d myWindow("Coordinate Frame");
     myWindow.showWidget("Coordinate Widget", cv::viz::WCoordinateSystem());
 
@@ -147,6 +150,7 @@ mvs::PointMat3 get_xyz(double fov_x, double fov_y, const mvs::Shape_t& shape) {
     cv::viz::WCloud cloud_widget1(pts3d, cv::viz::Color::green());
     myWindow.showWidget("cloud 1", cloud_widget1);
     myWindow.spin();
+#endif
 
     // // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
     // mvs::PointMat1 ax = 

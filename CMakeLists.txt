@@ -16,14 +16,13 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_ros
   airlab_ros_common
   vpi_ros
-  
 )
 
-find_package(Eigen3 3.4 REQUIRED)
+find_package(Eigen3 REQUIRED)
 ## System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED COMPONENTS system filesystem)
 find_package(vpi REQUIRED)
-find_package(OpenCV 3 REQUIRED)
+find_package(OpenCV REQUIRED)
 
 message(STATUS "OpenCV_DIR=${OpenCV_DIR}")
 message(STATUS "OpenCV_INCLUDE_DIRS=${OpenCV_INCLUDE_DIRS}")
@@ -35,6 +34,7 @@ endif()
 
 find_package(yaml-cpp REQUIRED)
 
+find_package(Backward REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -174,7 +174,6 @@ add_executable(${PROJECT_NAME}_node_angle src/vpi_angle_fisheye_node.cpp)
 # Specify libraries to link a library or executable target against
 
 target_link_libraries(${LIB_RESAMPLE}
-    opencv_viz
     yaml-cpp
     Eigen3::Eigen
     ${OpenCV_LIBRARIES}
@@ -182,13 +181,13 @@ target_link_libraries(${LIB_RESAMPLE}
 
 target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
-  opencv_viz
   ${OpenCV_LIBRARIES}
   ${Boost_SYSTEM_LIBRARY}
   ${Boost_FILESYSTEM_LIBRARY}
   vpi 
   Eigen3::Eigen
   ${LIB_RESAMPLE}
+  Backward::Backward
 )
 
 target_link_libraries(${PROJECT_NAME}_node_no_fancy
@@ -199,7 +198,7 @@ target_link_libraries(${PROJECT_NAME}_node_no_fancy
   ${OpenCV_LIBRARIES}
   Eigen3::Eigen
   ${LIB_RESAMPLE}
-  opencv_viz
+  Backward::Backward
 )
 
 
