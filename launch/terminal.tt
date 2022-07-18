@@ -1,0 +1,44 @@
+----------------------------------------------
+Profile:                     default
+Extending:          [cached] /opt/ros/melodic
+Workspace:                   /home/ros
+----------------------------------------------
+Build Space:        [exists] /home/ros/build
+Devel Space:        [exists] /home/ros/devel
+Install Space:      [unused] /home/ros/install
+Log Space:          [exists] /home/ros/logs
+Source Space:       [exists] /home/ros/src
+DESTDIR:            [unused] None
+----------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+----------------------------------------------
+Additional CMake Args:       None
+Additional Make Args:        None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+----------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+----------------------------------------------
+Workspace configuration appears valid.
+----------------------------------------------
+[build] Found '6' packages in 0.0 seconds.                                     
+[build] Package table is up to date.                                           
+Starting >>> airlab_ros_common                                                 
+Starting >>> instrumentor                                                      
+Starting >>> ros_vpi_common                                                    
+Starting >>> vpi_ros                                                           
+[build 0.1 s] [0/6 complete] [4/16 jobs] [1 queued] [vpi_ros:loadenv - 0.0]... Finished <<< airlab_ros_common                       [ 0.1 seconds ]           
+Finished <<< ros_vpi_common                          [ 0.1 seconds ]           
+[build 0.2 s] [2/6 complete] [16/16 jobs] [0 queued] [vpi_ros:make (0%) - 0... Finished <<< instrumentor                            [ 0.1 seconds ]           
+[build 0.3 s] [3/6 complete] [2/16 jobs] [0 queued] [vpi_ros:make (0%) - 0.2]  Finished <<< vpi_ros                                 [ 0.2 seconds ]           
+Starting >>> vpi_resample_fisheye                                              
+[build 0.4 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 0.5 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build] Interrupted by user!                                                   
+[build] Summary: 4 of 6 packages succeeded.                                    
+[build] Ignored: None.                                                         
+[build] Warnings: None.                                                        
+[build] Abandoned: 2 packages were abandoned.                                  
+[build] Failed: No packages failed.                                            
+[build] Runtime: 0.6 seconds total.                                            

@@ -1,0 +1,88 @@
+<launch>
+    
+  <arg name="calib_fn" default="$(find vpi_resample_fisheye)/calib/kalibr_redone.yaml" />
+  <arg name="cam_idx" default="0" />
+  <arg name="out_size" default="1000, 1000" />
+  <arg name="out_fov" default="100, 100" />
+
+  <arg name="rotations_0" default="60, 0" />
+  <arg name="rotations_1" default="60, 100" />
+  <arg name="rotations_2" default="60, 200" />
+  <arg name="rotations_3" default="60, 300" />
+
+  <arg name="out_topic_0" default="/fisheye_resampler_0/" />
+  <arg name="out_topic_1" default="/fisheye_resampler_1/" />
+  <arg name="out_topic_2" default="/fisheye_resampler_2/" />
+  <arg name="out_topic_3" default="/fisheye_resampler_3/" />
+
+  <arg name="output_dir_0" default="/home/data/1705_reprojections/cam0/" />
+  <arg name="output_dir_1" default="/home/data/1705_reprojections/cam1/" />
+  <arg name="output_dir_2" default="/home/data/1705_reprojections/cam2/" />
+  <arg name="output_dir_3" default="/home/data/1705_reprojections/cam3/" />
+
+  <node name="vpi_resample_fisheye_node_0" 
+        pkg="vpi_resample_fisheye" 
+        type="vpi_resample_fisheye_node" 
+        output="screen" 
+        disable-launch-prefix="gdb --args">
+
+    <param name="calib_fn" type="str" value="$(arg calib_fn)" />
+    <param name="cam_idx" type="int" value="$(arg cam_idx)" />
+    <param name="out_size" type="str" value="$(arg out_size)" />
+    <param name="out_fov" type="str" value="$(arg out_fov)" />
+    <param name="rotations" type="str" value="$(arg rotations_0)" />
+    <param name="out_topic" type="str" value="$(arg out_topic_0)" />
+    <param name="output_dir" type="str" value="$(arg output_dir_0)" />
+    <param name="backend_type" type="str" value="cuda" />
+  </node>
+
+  <node name="vpi_resample_fisheye_node_1" 
+        pkg="vpi_resample_fisheye" 
+        type="vpi_resample_fisheye_node" 
+        output="screen" 
+        disable-launch-prefix="gdb --args">
+
+    <param name="calib_fn" type="str" value="$(arg calib_fn)" />
+    <param name="cam_idx" type="int" value="$(arg cam_idx)" />
+    <param name="out_size" type="str" value="$(arg out_size)" />
+    <param name="out_fov" type="str" value="$(arg out_fov)" />
+    <param name="rotations" type="str" value="$(arg rotations_1)" />
+    <param name="out_topic" type="str" value="$(arg out_topic_1)" />
+    <param name="output_dir" type="str" value="$(arg output_dir_1)" />
+    <param name="backend_type" type="str" value="cuda" />
+  </node>
+
+    <node name="vpi_resample_fisheye_node_3" 
+        pkg="vpi_resample_fisheye" 
+        type="vpi_resample_fisheye_node" 
+        output="screen" 
+        disable-launch-prefix="gdb --args">
+
+    <param name="calib_fn" type="str" value="$(arg calib_fn)" />
+    <param name="cam_idx" type="int" value="$(arg cam_idx)" />
+    <param name="out_size" type="str" value="$(arg out_size)" />
+    <param name="out_fov" type="str" value="$(arg out_fov)" />
+    <param name="rotations" type="str" value="$(arg rotations_2)" />
+    <param name="out_topic" type="str" value="$(arg out_topic_2)" />
+    <param name="output_dir" type="str" value="$(arg output_dir_2)" />
+    <param name="backend_type" type="str" value="cuda" />
+  </node>
+
+    <node name="vpi_resample_fisheye_node_4" 
+        pkg="vpi_resample_fisheye" 
+        type="vpi_resample_fisheye_node" 
+        output="screen" 
+        disable-launch-prefix="gdb --args">
+
+    <param name="calib_fn" type="str" value="$(arg calib_fn)" />
+    <param name="cam_idx" type="int" value="$(arg cam_idx)" />
+    <param name="out_size" type="str" value="$(arg out_size)" />
+    <param name="out_fov" type="str" value="$(arg out_fov)" />
+    <param name="rotations" type="str" value="$(arg rotations_3)" />
+    <param name="out_topic" type="str" value="$(arg out_topic_3)" />
+    <param name="output_dir" type="str" value="$(arg output_dir_3)" />
+    <param name="backend_type" type="str" value="cuda" />
+  </node>
+
+
+</launch>

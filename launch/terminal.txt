@@ -1,0 +1,1304 @@
+----------------------------------------------
+Profile:                     default
+Extending:          [cached] /opt/ros/melodic
+Workspace:                   /home/ros
+----------------------------------------------
+Build Space:        [exists] /home/ros/build
+Devel Space:        [exists] /home/ros/devel
+Install Space:      [unused] /home/ros/install
+Log Space:          [exists] /home/ros/logs
+Source Space:       [exists] /home/ros/src
+DESTDIR:            [unused] None
+----------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+----------------------------------------------
+Additional CMake Args:       None
+Additional Make Args:        None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+----------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+----------------------------------------------
+Workspace configuration appears valid.
+----------------------------------------------
+[build] Found '6' packages in 0.0 seconds.                                     
+[build] Package table is up to date.                                           
+Starting >>> airlab_ros_common                                                 
+Starting >>> instrumentor                                                      
+Starting >>> ros_vpi_common                                                    
+Starting >>> vpi_ros                                                           
+Finished <<< airlab_ros_common                       [ 0.1 seconds ]           
+[build 0.1 s] [1/6 complete] [3/16 jobs] [1 queued] [vpi_ros:loadenv - 0.0]... Finished <<< ros_vpi_common                          [ 0.1 seconds ]           
+[build 0.2 s] [2/6 complete] [16/16 jobs] [0 queued] [vpi_ros:make (0%) - 0... Finished <<< instrumentor                            [ 0.1 seconds ]           
+[build 0.3 s] [3/6 complete] [2/16 jobs] [0 queued] [vpi_ros:make (0%) - 0.2]  Finished <<< vpi_ros                                 [ 0.2 seconds ]           
+Starting >>> vpi_resample_fisheye                                              
+[build 0.4 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 0.5 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 0.6 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 0.7 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 0.8 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 0.9 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.0 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.1 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.2 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.3 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.4 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.5 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.6 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.7 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.8 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 1.9 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.0 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.1 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.2 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.3 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.4 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.5 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.6 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.7 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.8 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 2.9 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.0 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.1 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.2 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.3 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.4 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.5 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.6 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.7 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.8 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 3.9 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.0 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.1 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.2 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.3 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.4 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.5 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.6 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.7 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.8 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 4.9 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 5.0 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 5.1 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 5.2 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 5.3 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 5.4 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... [build 5.5 s] [4/6 complete] [1/16 jobs] [0 queued] [vpi_resample_fisheye:m... _______________________________________________________________________________
+Errors << vpi_resample_fisheye:make /home/ros/logs/vpi_resample_fisheye/build.make.140.log
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h: In instantiation of '[01m[Kstruct Eigen::internal::accessors_level<double>[m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:41:34:[m[K   required from '[01m[Kclass Eigen::DenseBase<double>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:48:34:[m[K   required from '[01m[Kclass Eigen::MatrixBase<double>[m[K'
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:32:54:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+   enum { has_direct_access = [01;31m[K(traits<Derived>::Flags & DirectAccessBit)[m[K ? 1 : 0,
+                              [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:33:53:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+          has_write_access = [01;31m[K(traits<Derived>::Flags & LvalueBit)[m[K ? 1 : 0,
+                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:417[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/EigenBase.h: In instantiation of '[01m[Kstruct Eigen::EigenBase<double>[m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:34:7:[m[K   required from '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:300:7:[m[K   required from '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:41:34:[m[K   required from '[01m[Kclass Eigen::DenseBase<double>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:48:34:[m[K   required from '[01m[Kclass Eigen::MatrixBase<double>[m[K'
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/EigenBase.h:41:59:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+   typedef typename internal::traits<Derived>::StorageKind [01;31m[KStorageKind[m[K;
+                                                           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:300:7:[m[K   required from '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:41:34:[m[K   required from '[01m[Kclass Eigen::DenseBase<double>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:48:34:[m[K   required from '[01m[Kclass Eigen::MatrixBase<double>[m[K'
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:37:61:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::StorageKind [01;31m[KStorageKind[m[K;
+                                                             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:38:56:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::Scalar [01;31m[KScalar[m[K;
+                                                        [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:39:60:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::packet_traits<Scalar>::type [01;31m[KPacketScalar[m[K;
+                                                            [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:48:81:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+     typedef typename internal::conditional<bool([01;31m[Kinternal::traits<Derived>::Flags&LvalueBit[m[K),
+                                                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:55:30:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                      >::type [01;31m[KPacketReturnType[m[K;
+                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:41:34:[m[K   required from '[01m[Kclass Eigen::DenseBase<double>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:48:34:[m[K   required from '[01m[Kclass Eigen::MatrixBase<double>[m[K'
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:306:61:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::StorageKind [01;31m[KStorageKind[m[K;
+                                                             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:307:56:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::Scalar [01;31m[KScalar[m[K;
+                                                        [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:308:60:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::packet_traits<Scalar>::type [01;31m[KPacketScalar[m[K;
+                                                            [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:309:46:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename NumTraits<Scalar>::Real [01;31m[KRealScalar[m[K;
+                                              [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:414[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:311:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseCoeffsBase<double, 1>::Base {aka Eigen::DenseCoeffsBase<double, 0>}::coeff[m[K' in '[01m[KEigen::DenseCoeffsBase<double, 1>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'}
+     using Base::[01;31m[Kcoeff[m[K;
+                 [01;31m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:318:26:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseCoeffsBase<double, 1>::Base {aka Eigen::DenseCoeffsBase<double, 0>}::operator[][m[K' in '[01m[KEigen::DenseCoeffsBase<double, 1>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'}
+     using Base::operator[[01;31m[K][m[K;
+                          [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:319:26:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseCoeffsBase<double, 1>::Base {aka Eigen::DenseCoeffsBase<double, 0>}::operator()[m[K' in '[01m[KEigen::DenseCoeffsBase<double, 1>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'}
+     using Base::operator([01;31m[K)[m[K;
+                          [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:320:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseCoeffsBase<double, 1>::Base {aka Eigen::DenseCoeffsBase<double, 0>}::x[m[K' in '[01m[KEigen::DenseCoeffsBase<double, 1>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'}
+     using Base::[01;31m[Kx[m[K;
+                 [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:321:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseCoeffsBase<double, 1>::Base {aka Eigen::DenseCoeffsBase<double, 0>}::y[m[K' in '[01m[KEigen::DenseCoeffsBase<double, 1>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'}
+     using Base::[01;31m[Ky[m[K;
+                 [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:322:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseCoeffsBase<double, 1>::Base {aka Eigen::DenseCoeffsBase<double, 0>}::z[m[K' in '[01m[KEigen::DenseCoeffsBase<double, 1>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'}
+     using Base::[01;31m[Kz[m[K;
+                 [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:323:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseCoeffsBase<double, 1>::Base {aka Eigen::DenseCoeffsBase<double, 0>}::w[m[K' in '[01m[KEigen::DenseCoeffsBase<double, 1>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 0>[m[K'}
+     using Base::[01;31m[Kw[m[K;
+                 [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/DenseBase.h: In instantiation of '[01m[Kclass Eigen::DenseBase<double>[m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:48:34:[m[K   required from '[01m[Kclass Eigen::MatrixBase<double>[m[K'
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:55:61:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::StorageKind [01;31m[KStorageKind[m[K;
+                                                             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:63:62:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::StorageIndex [01;31m[KStorageIndex[m[K;
+                                                              [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:66:56:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::Scalar [01;31m[KScalar[m[K;
+                                                        [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:73:46:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename NumTraits<Scalar>::Real [01;31m[KRealScalar[m[K;
+                                              [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:83:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::coeff[m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::[01;31m[Kcoeff[m[K;
+                 [01;31m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:84:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::coeffByOuterInner[m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::[01;31m[KcoeffByOuterInner[m[K;
+                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:85:26:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::operator()[m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::operator([01;31m[K)[m[K;
+                          [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:86:26:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::operator[][m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::operator[[01;31m[K][m[K;
+                          [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:87:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::x[m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::[01;31m[Kx[m[K;
+                 [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:88:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::y[m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::[01;31m[Ky[m[K;
+                 [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:89:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::z[m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::[01;31m[Kz[m[K;
+                 [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:90:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::DenseBase<double>::Base {aka Eigen::DenseCoeffsBase<double, 1>}::w[m[K' in '[01m[KEigen::DenseBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseCoeffsBase<double, 1>[m[K'}
+     using Base::[01;31m[Kw[m[K;
+                 [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:98:10:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+     enum [01;31m[K{[m[K
+          [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:98:10:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:113:28:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+       SizeAtCompileTime = [01;31m[K(internal::size_at_compile_time<internal::traits<Derived>::RowsAtCompileTime,[m[K
+                           [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ [01;31m[K                                                   internal::traits<Derived>::ColsAtCompileTime>::ret)[m[K,
+                                                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:98:10:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+     enum [01;31m[K{[m[K
+          [01;31m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:98:10:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:141:31:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+       MaxSizeAtCompileTime = [01;31m[K(internal::size_at_compile_time<internal::traits<Derived>::MaxRowsAtCompileTime,[m[K
+                              [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ [01;31m[K                                                      internal::traits<Derived>::MaxColsAtCompileTime>::ret)[m[K,
+                                                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:153:79:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+       IsVectorAtCompileTime = [01;31m[Kinternal::traits<Derived>::MaxRowsAtCompileTime == 1[m[K
+                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:154:79:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+                            || [01;31m[Kinternal::traits<Derived>::MaxColsAtCompileTime == 1[m[K,
+                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:98:10:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+     enum [01;31m[K{[m[K
+          [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h: In instantiation of '[01m[Kstruct Eigen::internal::has_direct_access<double>[m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:98:10:[m[K   required from '[01m[Kclass Eigen::DenseBase<double>[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:48:34:[m[K   required from '[01m[Kclass Eigen::MatrixBase<double>[m[K'
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:27:40:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+   enum { ret = [01;31m[K(traits<Derived>::Flags & DirectAccessBit)[m[K ? 1 : 0 };
+                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/DenseBase.h: In instantiation of '[01m[Kclass Eigen::DenseBase<double>[m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:48:34:[m[K   required from '[01m[Kclass Eigen::MatrixBase<double>[m[K'
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:174:81:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::find_best_packet<Scalar,SizeAtCompileTime>::type [01;31m[KPacketScalar[m[K;
+                                                                                 [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:186:13:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+           > [01;31m[KPlainMatrix[m[K;
+             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:196:13:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+           > [01;31m[KPlainArray[m[K;
+             [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:205:65:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                                  PlainMatrix, PlainArray>::type [01;31m[KPlainObject[m[K;
+                                                                 [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:262:78:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef CwiseNullaryOp<internal::scalar_constant_op<Scalar>,PlainObject> [01;31m[KConstantReturnType[m[K;
+                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:264:85:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef CwiseNullaryOp<internal::linspaced_op<Scalar,PacketScalar>,PlainObject> [01;31m[KSequentialLinSpacedReturnType[m[K;
+                                                                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:266:85:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef CwiseNullaryOp<internal::linspaced_op<Scalar,PacketScalar>,PlainObject> [01;31m[KRandomAccessLinSpacedReturnType[m[K;
+                                                                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:268:139:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef Matrix<typename NumTraits<typename internal::traits<Derived>::Scalar>::Real, internal::traits<Derived>::ColsAtCompileTime, 1> [01;31m[KEigenvaluesReturnType[m[K;
+                                                                                                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:346:5:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     [01;31m[KNullaryExpr[m[K(Index rows, Index cols, const CustomNullaryOp& func);
+     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:349:5:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     [01;31m[KNullaryExpr[m[K(Index size, const CustomNullaryOp& func);
+     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:352:5:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     [01;31m[KNullaryExpr[m[K(const CustomNullaryOp& func);
+     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:392:102:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::add_const_on_value_type<typename internal::eval<Derived>::type>::type [01;31m[KEvalReturnType[m[K;
+                                                                                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Redux.h:449:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KDenseBase<Derived>[m[K::sum() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Redux.h:462:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KDenseBase<Derived>[m[K::mean() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Redux.h:483:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KDenseBase<Derived>[m[K::prod() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Redux.h:426:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KDenseBase<Derived>[m[K::minCoeff() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Redux.h:436:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KDenseBase<Derived>[m[K::maxCoeff() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:450:48:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typename internal::traits<Derived>::Scalar [01;31m[KminCoeff[m[K(IndexType* row, IndexType* col) const;
+                                                [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:452:48:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typename internal::traits<Derived>::Scalar [01;31m[KmaxCoeff[m[K(IndexType* row, IndexType* col) const;
+                                                [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:454:48:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typename internal::traits<Derived>::Scalar [01;31m[KminCoeff[m[K(IndexType* index) const;
+                                                [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:456:48:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typename internal::traits<Derived>::Scalar [01;31m[KmaxCoeff[m[K(IndexType* index) const;
+                                                [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:460:12:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     Scalar [01;31m[Kredux[m[K(const BinaryOp& func) const;
+            [01;31m[K^~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:521:76:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef CwiseNullaryOp<internal::scalar_random_op<Scalar>,PlainObject> [01;31m[KRandomReturnType[m[K;
+                                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:573[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:14:86:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef Block<Derived, internal::traits<Derived>::RowsAtCompileTime, 1, !IsRowMajor> [01;31m[KColXpr[m[K;
+                                                                                      [01;31m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:15:98:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef const Block<const Derived, internal::traits<Derived>::RowsAtCompileTime, 1, !IsRowMajor> [01;31m[KConstColXpr[m[K;
+                                                                                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:17:85:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef Block<Derived, 1, internal::traits<Derived>::ColsAtCompileTime, IsRowMajor> [01;31m[KRowXpr[m[K;
+                                                                                     [01;31m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:18:97:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef const Block<const Derived, 1, internal::traits<Derived>::ColsAtCompileTime, IsRowMajor> [01;31m[KConstRowXpr[m[K;
+                                                                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:20:92:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef Block<Derived, internal::traits<Derived>::RowsAtCompileTime, Dynamic, !IsRowMajor> [01;31m[KColsBlockXpr[m[K;
+                                                                                            [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:21:104:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef const Block<const Derived, internal::traits<Derived>::RowsAtCompileTime, Dynamic, !IsRowMajor> [01;31m[KConstColsBlockXpr[m[K;
+                                                                                                        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:23:91:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef Block<Derived, Dynamic, internal::traits<Derived>::ColsAtCompileTime, IsRowMajor> [01;31m[KRowsBlockXpr[m[K;
+                                                                                           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h:24:103:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+ typedef const Block<const Derived, Dynamic, internal::traits<Derived>::ColsAtCompileTime, IsRowMajor> [01;31m[KConstRowsBlockXpr[m[K;
+                                                                                                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+/usr/include/eigen3/Eigen/src/Core/MatrixBase.h: In instantiation of '[01m[Kclass Eigen::MatrixBase<double>[m[K':
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:35:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:54:61:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::StorageKind [01;31m[KStorageKind[m[K;
+                                                             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:55:62:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::StorageIndex [01;31m[KStorageIndex[m[K;
+                                                              [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:56:56:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::traits<Derived>::Scalar [01;31m[KScalar[m[K;
+                                                        [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:57:60:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::packet_traits<Scalar>::type [01;31m[KPacketScalar[m[K;
+                                                            [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:58:46:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename NumTraits<Scalar>::Real [01;31m[KRealScalar[m[K;
+                                              [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:75:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::MatrixBase<double>::Base {aka Eigen::DenseBase<double>}::coeff[m[K' in '[01m[KEigen::MatrixBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseBase<double>[m[K'}
+     using Base::[01;31m[Kcoeff[m[K;
+                 [01;31m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:78:17:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::MatrixBase<double>::Base {aka Eigen::DenseBase<double>}::eval[m[K' in '[01m[KEigen::MatrixBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseBase<double>[m[K'}
+     using Base::[01;31m[Keval[m[K;
+                 [01;31m[K^~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:81:25:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::MatrixBase<double>::Base {aka Eigen::DenseBase<double>}::operator*=[m[K' in '[01m[KEigen::MatrixBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseBase<double>[m[K'}
+     using Base::operator[01;31m[K*=[m[K;
+                         [01;31m[K^~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:82:25:[m[K [01;31m[Kerror: [m[Kno members matching '[01m[KEigen::MatrixBase<double>::Base {aka Eigen::DenseBase<double>}::operator/=[m[K' in '[01m[KEigen::MatrixBase<double>::Base[m[K' {aka '[01m[Kclass Eigen::DenseBase<double>[m[K'}
+     using Base::operator[01;31m[K/=[m[K;
+                         [01;31m[K^~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:95:80:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                           EIGEN_SIZE_MAX(RowsAtCompileTime,ColsAtCompileTime)> [01;31m[KSquareMatrixType[m[K;
+                                                                                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:107:78:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef CwiseNullaryOp<internal::scalar_constant_op<Scalar>,PlainObject> [01;31m[KConstantReturnType[m[K;
+                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:112:30:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                      >::type [01;31m[KAdjointReturnType[m[K;
+                              [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:114:105:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef Matrix<std::complex<RealScalar>, internal::traits<Derived>::ColsAtCompileTime, 1, ColMajor> [01;31m[KEigenvaluesReturnType[m[K;
+                                                                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:116:78:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef CwiseNullaryOp<internal::scalar_identity_op<Scalar>,PlainObject> [01;31m[KIdentityReturnType[m[K;
+                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:120:65:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                   internal::traits<Derived>::ColsAtCompileTime> [01;31m[KBasisReturnType[m[K;
+                                                                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:125[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:19:27:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                   >::type [01;31m[KConjugateReturnType[m[K;
+                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:125[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:24:27:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                   >::type [01;31m[KRealReturnType[m[K;
+                           [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:125[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:29:27:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+                   >::type [01;31m[KNonConstRealReturnType[m[K;
+                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:125[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:31:71:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryOp<internal::scalar_imag_op<Scalar>, const Derived> [01;31m[KImagReturnType[m[K;
+                                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:125[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:33:71:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryView<internal::scalar_imag_ref_op<Scalar>, Derived> [01;31m[KNonConstImagReturnType[m[K;
+                                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:125[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:35:75:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryOp<internal::scalar_opposite_op<Scalar>, const Derived> [01;31m[KNegativeReturnType[m[K;
+                                                                           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:19:28:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ EIGEN_MAKE_CWISE_BINARY_OP([01;31m[Koperator[m[K-,difference)
+                            [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:915:4:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KEIGEN_MAKE_CWISE_BINARY_OP[m[K'
+   ([01;36m[KMETHOD[m[K)(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const \
+    [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:27:28:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ EIGEN_MAKE_CWISE_BINARY_OP([01;31m[Koperator[m[K+,sum)
+                            [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:915:4:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KEIGEN_MAKE_CWISE_BINARY_OP[m[K'
+   ([01;36m[KMETHOD[m[K)(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const \
+    [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:29:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ EIGEN_MAKE_SCALAR_BINARY_OP([01;31m[Koperator[m[K*,product)
+                             [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:950:4:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KEIGEN_MAKE_SCALAR_BINARY_OP_ONTHELEFT[m[K'
+   ([01;36m[KMETHOD[m[K)(const T& scalar, const StorageBaseType& matrix) { \
+    [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:1:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K'
+ [01;36m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K(operator*,product)
+ [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:29:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ EIGEN_MAKE_SCALAR_BINARY_OP([01;31m[Koperator[m[K*,product)
+                             [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:941:4:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KEIGEN_MAKE_SCALAR_BINARY_OP_ONTHERIGHT[m[K'
+   ([01;36m[KMETHOD[m[K)(const T& scalar) const { \
+    [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:1:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K'
+ [01;36m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K(operator*,product)
+ [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:69:40:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ EIGEN_MAKE_SCALAR_BINARY_OP_ONTHERIGHT([01;31m[Koperator[m[K/,quotient)
+                                        [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:941:4:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KEIGEN_MAKE_SCALAR_BINARY_OP_ONTHERIGHT[m[K'
+   ([01;36m[KMETHOD[m[K)(const T& scalar) const { \
+    [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:127[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h:15:70:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryOp<internal::scalar_abs_op<Scalar>, const Derived> [01;31m[KCwiseAbsReturnType[m[K;
+                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:127[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h:16:71:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryOp<internal::scalar_abs2_op<Scalar>, const Derived> [01;31m[KCwiseAbs2ReturnType[m[K;
+                                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:127[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h:17:71:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryOp<internal::scalar_sqrt_op<Scalar>, const Derived> [01;31m[KCwiseSqrtReturnType[m[K;
+                                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:127[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h:18:71:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryOp<internal::scalar_sign_op<Scalar>, const Derived> [01;31m[KCwiseSignReturnType[m[K;
+                                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:127[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h:19:74:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseUnaryOp<internal::scalar_inverse_op<Scalar>, const Derived> [01;31m[KCwiseInverseReturnType[m[K;
+                                                                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:23:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseProduct[m[K(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const
+ [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:43:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseEqual[m[K(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const
+ [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:63:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseNotEqual[m[K(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const
+ [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:78:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseMin[m[K(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const
+ [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:89:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseMin[m[K(const Scalar &other) const
+ [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:104:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseMax[m[K(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const
+ [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:115:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseMax[m[K(const Scalar &other) const
+ [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:131:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KcwiseQuotient[m[K(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const
+ [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:128[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:136:121:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ typedef CwiseBinaryOp<internal::scalar_cmp_op<Scalar,Scalar,internal::cmp_EQ>, const Derived, const ConstantReturnType> [01;31m[KCwiseScalarEqualReturnType[m[K;
+                                                                                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:199:5:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     [01;31m[Kdot[m[K(const MatrixBase<OtherDerived>& other) const;
+     [01;31m[K^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:446[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Dot.h:93:90:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ EIGEN_STRONG_INLINE typename NumTraits<typename internal::traits<Derived>::Scalar>::Real [01;31m[KMatrixBase<Derived>[m[K::squaredNorm() const
+                                                                                          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:446[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Dot.h:105:77:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ inline typename NumTraits<typename internal::traits<Derived>::Scalar>::Real [01;31m[KMatrixBase<Derived>[m[K::norm() const
+                                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:447[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/StableNorm.h:157:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KMatrixBase<Derived>[m[K::stableNorm() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:447[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/StableNorm.h:202:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KMatrixBase<Derived>[m[K::blueNorm() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:447[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/StableNorm.h:214:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KMatrixBase<Derived>[m[K::hypotNorm() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:261:31:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     const SparseView<Derived> [01;31m[KsparseView[m[K(const Scalar& m_reference = Scalar(0),
+                               [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Redux.h:498:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KMatrixBase<Derived>[m[K::trace() const
+ [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:319:50:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     template<int p> EIGEN_DEVICE_FUNC RealScalar [01;31m[KlpNorm[m[K() const;
+                                                  [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/LU:34[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:2[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/LU/Determinant.h:92:51:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ inline typename internal::traits<Derived>::Scalar [01;31m[KMatrixBase<Derived>[m[K::determinant() const
+                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:37[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:6[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/EulerAngles.h:37:1:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ [01;31m[KMatrixBase<Derived>[m[K::eulerAngles(Index a0, Index a1, Index a2) const
+ [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:406:124:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+     enum { HomogeneousReturnTypeDirection = ColsAtCompileTime==1&&RowsAtCompileTime==1 ? ([01;31m[K(internal::traits<Derived>::Flags&RowMajorBit)[m[K==RowMajorBit ? Horizontal : Vertical)
+                                                                                           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:416:63:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+                   [01;31m[Kinternal::traits<Derived>::ColsAtCompileTime==1[m[K ? SizeMinusOne : 1,
+                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:416:63:[m[K [01;31m[Kerror: [m[Kincomplete type '[01m[KEigen::internal::traits<double>[m[K' used in nested name specifier
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:455:60:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     typedef typename internal::stem_function<Scalar>::type [01;31m[KStemFunction[m[K;
+                                                            [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:465:50:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+     const MatrixComplexPowerReturnValue<Derived> [01;31m[Kpow[m[K(const std::complex<RealScalar>& p) const;
+                                                  [01;31m[K^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:21[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:17:29:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::traits<double>[m[K'
+ template<typename T> struct [01;36m[Ktraits[m[K;
+                             [01;36m[K^~~~~~[m[K
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:[m[K In member function '[01m[Kvoid mvs::FisheyeResampler::get_remap_coordinates()[m[K':
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:315:50:[m[K [01;31m[Kerror: [m[Kconversion from '[01m[KEigen::DenseBase<Eigen::Matrix<float, 3, -1> >::ColXpr[m[K' {aka '[01m[KEigen::Block<Eigen::Matrix<float, 3, -1>, 3, 1, true>[m[K'} to non-scalar type '[01m[KEigen::MatrixBase<double>[m[K' requested
+         Eigen::MatrixBase<double> point = [01;31m[Kxyz.col(i)[m[K;
+                                           [01;31m[K~~~~~~~^~~[m[K
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:317:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KNoncentralGenericCamera<double>::ProjectWithJacobian(Eigen::MatrixBase<double>&, mvs::FisheyeResampler::PixelT*&)[m[K'
+         camera.ProjectWithJacobian(point,pixel[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:42[m[K:
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/include/vpi_resample_fisheye/camera_model/noncentral_generic.h:467:8:[m[K [01;36m[Knote: [m[Kcandidate: '[01m[Ktemplate<class Derived> bool NoncentralGenericCamera<Scalar>::ProjectWithJacobian(const Eigen::MatrixBase<OtherDerived>&, NoncentralGenericCamera<Scalar>::PixelT*, Eigen::Matrix<_Scalar, 2, 3>*, Scalar) const [with Derived = Derived; Scalar = double][m[K'
+   bool [01;36m[KProjectWithJacobian[m[K(
+        [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/include/vpi_resample_fisheye/camera_model/noncentral_generic.h:467:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ros/src/dsta_ord_vpi_stereo/dsta_vpi_resample_fisheye/src/vpi_resample_fisheye_node_generic.cpp:317:47:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 2 provided
+         camera.ProjectWithJacobian(point,pixel[01;36m[K)[m[K;
+                                               [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/vpi_resample_fisheye_node_generic.dir/src/vpi_resample_fisheye_node_generic.cpp.o] Error 1
+make[1]: *** [CMakeFiles/vpi_resample_fisheye_node_generic.dir/all] Error 2
+make: *** [all] Error 2
+cd /home/ros/build/vpi_resample_fisheye; catkin build --get-env vpi_resample_fisheye | catkin env -si  /usr/bin/make --jobserver-fds=3,4 -j; cd -
+
+...............................................................................
+Failed << vpi_resample_fisheye:make                [ Exited with code 2 ]      
+Failed <<< vpi_resample_fisheye                    [ 5.3 seconds ]             
+Abandoned <<< dsta_vpi_resample_stereo                [ Unrelated job failed ] 
+[build] Summary: 4 of 6 packages succeeded.                                    
+[build] Ignored: None.                                                         
+[build] Warnings: None.                                                        
+[build] Abandoned: 1 packages were abandoned.                                  
+[build] Failed: 1 packages failed.                                             
+[build] Runtime: 5.6 seconds total.                                            
