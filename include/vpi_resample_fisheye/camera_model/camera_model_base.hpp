@@ -68,6 +68,7 @@ public:
 public:
     std::string name;
     std::string topic_name;
+    std::string frame_id;
     float fx;
     float fy;
     float cx;

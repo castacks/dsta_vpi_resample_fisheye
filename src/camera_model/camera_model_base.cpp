@@ -48,6 +48,7 @@ CameraModel::CameraModel(const std::string& name, float fx, float fy, float cx, 
 : name(name), fx(fx), fy(fy), cx(cx), cy(cy), shape(shape) 
 {
     topic_name = "";
+    frame_id = "default_camera";
     extrinsics = TransformMat::Identity();
 }
 
@@ -59,6 +60,7 @@ std::string CameraModel::string() const {
 
     ss << "name = " << name << "\n"
        << "topic_name = " << topic_name << "\n"
+       << "frame_id = " << frame_id << "\n"
        << "fx = " << fx << "\n"
        << "fy = " << fy << "\n"
        << "cx = " << cx << "\n"
