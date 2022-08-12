@@ -1,5 +1,7 @@
 
+#ifdef USE_BACKWORD
 #define BACKWARD_HAS_DW 1
+#endif
 
 // C++ std.
 // #include <filesystem> // Not supported by GCC 7.

@@ -1,6 +1,8 @@
 
+#ifdef USE_BACKWORD
 #define BACKWARD_HAS_DW 1
 #include <backward.hpp>
+#endif
 
 // C++ std.
 // #include <filesystem> // Not supported by GCC 7.
@@ -44,9 +46,11 @@
 // namespace fs = std::filesystem;
 namespace fs = boost::filesystem;
 
+#ifdef USE_BACKWORD
 namespace backward {
 backward::SignalHandling sh;
 } // namespace backward
+#endif
 
 constexpr const auto PI = boost::math::constants::pi<double>();
 

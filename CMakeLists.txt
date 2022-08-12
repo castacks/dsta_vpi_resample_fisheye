@@ -6,6 +6,8 @@ project(vpi_resample_fisheye)
 
 set(CMAKE_CXX_STANDARD 17)
 
+option(USE_BACKWORD "Use the Backword package" OFF)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -34,7 +36,12 @@ endif()
 
 find_package(yaml-cpp REQUIRED)
 
-find_package(Backward REQUIRED)
+if(USE_BACKWORD)
+  find_package(Backward REQUIRED)
+  set(BACKWORD_LIBS Backward::Backward)
+else()
+  set(BACKWORD_LIBS )
+endif()
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -187,7 +194,7 @@ target_link_libraries(${PROJECT_NAME}_node
   vpi 
   Eigen3::Eigen
   ${LIB_RESAMPLE}
-  Backward::Backward
+  ${BACKWORD_LIBS}
 )
 
 target_link_libraries(${PROJECT_NAME}_node_no_fancy
@@ -198,7 +205,7 @@ target_link_libraries(${PROJECT_NAME}_node_no_fancy
   ${OpenCV_LIBRARIES}
   Eigen3::Eigen
   ${LIB_RESAMPLE}
-  Backward::Backward
+  ${BACKWORD_LIBS}
 )
 
 
