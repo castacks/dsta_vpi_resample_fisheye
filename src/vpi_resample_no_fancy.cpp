@@ -1,5 +1,4 @@
-
-#ifdef USE_BACKWORD
+#ifdef USE_BACKWARD
 #define BACKWARD_HAS_DW 1
 #include <backward.hpp>
 #endif

@@ -1,7 +1,5 @@
-#ifdef USE_BACKWARD
+
 #define BACKWARD_HAS_DW 1
-#include <backward.hpp>
-#endif
 
 // C++ std.
 // #include <filesystem> // Not supported by GCC 7.
@@ -33,21 +31,20 @@
 // #include <vpi/OpenCVInterop.hpp>
 // #include <vpi/Stream.h>
 #include <vpi/WarpMap.h> // Not included in vpi_processor.h
-
-
-#ifdef WITH_OCV_VIZ
-#include <opencv2/viz.hpp>
-#endif
-#include <opencv2/core/eigen.hpp>
-
 // #include <vpi/algo/Remap.h>
 
 // Other workspace packages.
 #include "airlab_ros_common/ros_common.hpp"
 
 // Local.
+
 #include "vpi_resample_fisheye/calib/kalibr_parser.hpp"
 #include "vpi_resample_fisheye/camera_model/double_sphere.hpp"
+#include "vpi_resample_fisheye/camera_model/central_generic.h"
+#include "vpi_resample_fisheye/camera_model/noncentral_generic.h"
+#include "vpi_resample_fisheye/camera_model/generic_base.hpp"
+#include <boost/assign/list_of.hpp> // for 'map_list_of()'
+
 
 // Namespace.
 // namespace fs = std::filesystem;
@@ -68,6 +65,8 @@ void mySigIntHandler(int sig)
   g_request_shutdown = 1;
 }
 
+
+
 template<typename T>
 std::vector<T> extract_number_from_string(
     const std::string& s, 
@@ -76,7 +75,7 @@ std::vector<T> extract_number_from_string(
 
     if ( expected <= 0 ) {
         std::stringstream ss;
-        ss << "Exprected number must be positive. expected = " << expected << ". ";
+        ss << "Expected number must be positive. expected = " << expected << ". ";
         throw std::runtime_error(ss.str());
     }
 
@@ -110,122 +109,49 @@ mvs::PointMat3 get_xyz(double fov_x, double fov_y, const mvs::Shape_t& shape) {
     typedef mvs::PointMat3::Scalar Scalar_t;
 
     const int N = shape.size();
-        // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
+    
+    // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
     mvs::PointMat1 ax = 
-        mvs::PointMat1::LinSpaced(shape.w, 0, 1) * static_cast<Scalar_t>( fov_x / 180 * PI );
+        mvs::PointMat1::LinSpaced(shape.w, -1, 1) * static_cast<Scalar_t>( tan(fov_x / 2.0 / 180 * PI) );
     mvs::PointMat1 ay = 
-        mvs::PointMat1::LinSpaced(shape.h, 1, 0) * static_cast<Scalar_t>( fov_y / 2.0/ 180 * PI );
+        mvs::PointMat1::LinSpaced(shape.h, -1, 1) * static_cast<Scalar_t>( tan(fov_y / 2.0 / 180 * PI) );
 
     // The xyz coordinates of pixels in the pinhole camera.
     mvs::PointMat3 xyz;
     xyz.resize( 3, N );
 
     xyz.row(0) = 
-        ay.array().sin().matrix().replicate( 1, shape.h );
-    xyz.row(0) = xyz.row(0)* (ax.array().cos().matrix().replicate( 1,shape.h )).asDiagonal() ;
-
+        ax.array().matrix().replicate( 1, shape.h );
     // Eigen 3.4.
     // xyz.row(1) = 
     //     ay.array().tan().matrix().replicate( shape.w, 1 ).reshaped(1, N);
 
     // Eigen 3.3.
     Eigen::Matrix<Scalar_t, Eigen::Dynamic, Eigen::Dynamic> temp_row = 
-        ay.array().sin().matrix().replicate( shape.w, 1 );
+        ay.array().matrix().replicate( shape.w, 1 );
     xyz.row(1) = Eigen::Map<Eigen::Matrix<Scalar_t, 1, Eigen::Dynamic>>( 
         temp_row.data(), 1, N
     );
-    xyz.row(1) = xyz.row(1)*(ax.array().sin().matrix().replicate( 1,shape.h )).asDiagonal();
-    // xyz.row(2) = mvs::PointMat1::Ones(1, N);
-    xyz.row(2) =  (ay.array().cos().matrix().replicate( 1, shape.h )); // z= r*cos(theta)
-
-    Eigen::Matrix<float, 3, -1> xyz_copy = xyz;
     
-    cv::Mat opencv_3d_points;
-    cv::eigen2cv(xyz_copy,opencv_3d_points);
-
-#ifdef WITH_OCV_VIZ
-    cv::viz::Viz3d window;
-    window.showWidget("coordinate", cv::viz::WCoordinateSystem(100));
-    window.showWidget("points", cv::viz::WCloud(opencv_3d_points, cv::viz::Color::green()));
-    window.spin();
-#endif
-
-    // xyz.row(2) = xyz.row(2)* (ay.array().cos().matrix().replicate( shape.w, 1 )).asDiagonal() ;
-    
-    // // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
-    // mvs::PointMat1 ax = 
-    //     mvs::PointMat1::LinSpaced(shape.w, -1, 1) * static_cast<Scalar_t>( (fov_x / 2.0 / 180 * PI) );
-    // mvs::PointMat1 ay = 
-    //     mvs::PointMat1::LinSpaced(shape.h, -1, 1) * static_cast<Scalar_t>( (fov_y / 2.0 / 180 * PI) );
-
-    // // The xyz coordinates of pixels in the pinhole camera.
-    // // using spherical coordinate systems, with theta the angle w.r.t. fov_y and psi w.r.t. fov_x:
-    // // x = r*sin(psi)*sin(theta)
-    // // y = r*cos(psi)*sin(theta)
-    // // z = r*cos(theta)
-
-
-    // mvs::PointMat3 xyz;
-    // xyz.resize( 3, N );
-    
-    // xyz.row(0) = 
-    //     ax.array().sin().matrix().replicate( 1, shape.h );
-    // xyz.row(0) = xyz.row(0)* (ay.array().cos().matrix().replicate( shape.w, 1 )).asDiagonal() ;
-    // // Eigen 3.4.
-    // Eigen::Matrix<Scalar_t, Eigen::Dynamic, Eigen::Dynamic> temp_row = 
-    //     ay.array().sin().matrix().replicate( shape.w, 1 );
-    // xyz.row(1) = Eigen::Map<Eigen::Matrix<Scalar_t, 1, Eigen::Dynamic>>( 
-    //     temp_row.data(), 1, N);
-
-    // temp_row = 
-    //     ay.array().cos().matrix().replicate( shape.w, 1 );
-    // xyz.row(2) = Eigen::Map<Eigen::Matrix<Scalar_t, 1, Eigen::Dynamic>>( 
-    //     temp_row.data(), 1, N);
-    // xyz.row(2) = xyz.row(2)*(ax.array().cos().matrix().replicate( 1, shape.h )).asDiagonal();
-
-    // xyz.row(1) = 
-    //     ay.array().sin().matrix().replicate( shape.w, 1 );
-
-    // // Eigen 3.3.
-    // Eigen::Matrix<Scalar_t, Eigen::Dynamic, Eigen::Dynamic> temp_row = 
-    //     ay.array().sin().matrix().replicate( shape.w, 1 );
-    // xyz.row(1) = (ay.array().sin().matrix().replicate( shape.w, 1 ));
-    // xyz.row(1) = xyz.row(1)* (ay.array().cos().matrix().replicate( shape.w,  )).asDiagonal() ;
-    // xyz.row(2) =  (ax.array().cos().matrix().replicate( 1, shape.h )); // z= r*cos(theta)
-    // xyz.row(2) = xyz.row(2)* (ay.array().cos().matrix().replicate( shape.w, 1 )).asDiagonal() ;
-
-    // xyz.row(2) = mvs::PointMat1::Ones(1, N);
+    xyz.row(2) = mvs::PointMat1::Ones(1, N);
     // xyz.row(2).setZero();
     // xyz.row(2) = (mvs::PointMat1::Ones(1, N)- xyz.colwise().squaredNorm());
-    // xyz.row(2) = xyz.row(2).array().sqrt();
+    // xyz.row(2) = xyz.row(2).colwise().norm();
+
 
     return xyz;
 }
 
-std::vector<mvs::DoubleSphere> read_cameras(
-    const std::string& yaml_fn ) {
-    
-    YAML::Node calib = YAML::LoadFile(yaml_fn);
 
-    mvs::KalibrParser parser;
-    
-    mvs::DoubleSphere cam0 = parser.parser_camera_node(calib["cam0"], "cam0");
-    mvs::DoubleSphere cam1 = parser.parser_camera_node(calib["cam1"], "cam1");
-    mvs::DoubleSphere cam2 = parser.parser_camera_node(calib["cam2"], "cam2", cam1.extrinsics);
-
-    return { cam0, cam1, cam2 }; // Did I just make a copy?
-}
 
 namespace mvs
 {
 
-template < typename CameraModel_t >
 class FisheyeResampler : public VPIProcessor {
 
 public:
     FisheyeResampler(ros::NodeHandle &nh_, ros::NodeHandle &nh_private_)
     : VPIProcessor(nh_, nh_private_),
-      p_cam_model(nullptr),
       out_shape{200, 300}, out_fov_x(90.), out_fov_y(40.),
       prepared(false)
     {
@@ -239,19 +165,79 @@ public:
     ~FisheyeResampler() {
         destroyResources();
     }
-
+    typedef Eigen::Matrix<double, 2, 1> PixelT;
     void imageCallback(const sensor_msgs::ImageConstPtr &msg)
     {
         if (!prepared) {
             ROS_WARN_STREAM("Resampler not ready yet. ");
             return;
         }
+
         cv_bridge::CvImagePtr _cv_ptr = cv_bridge::toCvCopy(msg, msg->encoding);
         processImage(_cv_ptr);
     }
 
-    void set_camera_model(CameraModel_t* pCM) { p_cam_model = pCM; }
-    void set_img_output_dir(std::string output_dir_requested){save_imgs = true; output_dir = output_dir_requested;}
+    void read_camera(const std::string& yaml_fn ) 
+    {
+        switch(cam_model_type_)
+        {
+            case CamType::noncentralgeneric: 
+            {
+                // NoncentralGenericCamera<double>* camera_casted_ = static_cast<NoncentralGenericCamera<double>*>(camera_);
+                auto camera_casted = std::static_pointer_cast<NoncentralGenericCamera<double>>(camera_);
+                bool result = camera_casted->Read(yaml_fn.c_str());
+                ROS_INFO_STREAM(camera_casted->width());
+                break;
+            }
+            case CamType::centralgeneric: 
+            {
+                auto camera_casted = std::static_pointer_cast<CentralGenericCamera<double>>(camera_);
+                bool result = camera_casted->Read(yaml_fn.c_str());
+                ROS_INFO_STREAM(camera_casted->width());
+                break;
+            }
+        }
+        
+    }
+
+    enum class CamType 
+    {
+        centralgeneric,
+        noncentralgeneric,
+        none
+    };
+
+    CamType StringToCamType(std::string e)
+    {
+        std::map<std::string,CamType> cam_map = boost::assign::map_list_of("centralgeneric",CamType::centralgeneric)
+        ("noncentralgeneric",CamType::noncentralgeneric);
+        return cam_map[e];
+    }
+
+    void set_camera_type(std::string cam_model_type)
+    {   
+        cam_model_type_ = StringToCamType(cam_model_type);
+
+        switch(cam_model_type_)
+        {
+            case CamType::noncentralgeneric: 
+            {
+                // NoncentralGenericCamera<double>* camera_casted_ = static_cast<NoncentralGenericCamera<double>*>(camera_);
+                camera_ = std::make_shared<NoncentralGenericCamera<double>>();
+                break;
+            }
+            case CamType::centralgeneric: 
+            {
+                // camera_ = std::make_shared<CentralGenericCamera<double>>(CentralGenericCamera<double>());
+                camera_ =std::make_shared<CentralGenericCamera<double>>();
+                break;
+            }
+        }
+    }
+
+
+    // void set_camera_model(NoncentralGenericCamera<double> camera) { camera_ = camera; }
+    void set_img_output_dir(std::string output_dir_requested){save_imgs = true; output_dir = output_dir_requested; }
     void set_out_shape(const Shape_t& shape) { out_shape = shape; }
     void set_out_fov(double fov_x, double fov_y) {
         out_fov_x = fov_x;
@@ -281,7 +267,7 @@ public:
     ros::Publisher pub_resampled;
 
 private:
-    CameraModel_t* p_cam_model;
+    
 
     Shape_t out_shape;
     double out_fov_x;
@@ -304,13 +290,14 @@ private:
     bool save_imgs = false;
     int img_counter = 0;
     std::string output_dir{"None"};
+    CamType cam_model_type_;
+    std::shared_ptr<BaseCameraClass<double>> camera_; // initialize as something
 
 public:
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 };
 
-template < typename CameraModel_t >
-void FisheyeResampler<CameraModel_t>::populate_vpi_warp_map( const cv::Mat& xx, const cv::Mat& yy, VPIWarpMap* vpi_warp_map ) {
+void FisheyeResampler::populate_vpi_warp_map( const cv::Mat& xx, const cv::Mat& yy, VPIWarpMap* vpi_warp_map ) {
     const int W = xx.cols;
     const int H = xx.rows;
 
@@ -343,13 +330,8 @@ void FisheyeResampler<CameraModel_t>::populate_vpi_warp_map( const cv::Mat& xx, 
     }
 }
 
-template < typename CameraModel_t >
-void FisheyeResampler<CameraModel_t>::prepare(ros::NodeHandle &nh_, ros::NodeHandle &nh_private_) {
-    if ( !p_cam_model ) {
-        std::string s = "p_cam_model is null. ";
-        ROS_ERROR_STREAM(s);
-        throw std::runtime_error(s);
-    }
+void FisheyeResampler::prepare(ros::NodeHandle &nh_, ros::NodeHandle &nh_private_) {
+
     
     ROS_INFO_STREAM("In prepare(). ");
     get_remap_coordinates();
@@ -370,8 +352,7 @@ void FisheyeResampler<CameraModel_t>::prepare(ros::NodeHandle &nh_, ros::NodeHan
     prepared = true;
 }
 
-template < typename CameraModel_t >
-void FisheyeResampler<CameraModel_t>::destroyResources() {
+void FisheyeResampler::destroyResources() {
     VPIProcessor::destroyResources();
 
     vpiPayloadDestroy(v_warp);
@@ -380,15 +361,53 @@ void FisheyeResampler<CameraModel_t>::destroyResources() {
     // vpiContextDestroy(ctx);
 }
 
-template < typename CameraModel_t >
-void FisheyeResampler<CameraModel_t>::get_remap_coordinates() {
+void FisheyeResampler::get_remap_coordinates() {
     // Get the xyz in the pinhole camera.
     mvs::PointMat3 xyz = get_xyz( out_fov_x, out_fov_y, out_shape );
 
     // Apply the rotation to the xyz in the pinhole to get the new xyz in the fisheye camera frame.
     xyz = R * xyz.eval();
 
-    auto [ ux, uy ] = p_cam_model->project_3d_2_image_plane_separated( xyz );
+    PointMat1 ux, uy;
+    const int num_points = xyz.cols();
+
+    ux = xyz.row(0);
+    uy = xyz.row(1);
+
+    for (int i = 0; i < xyz.cols(); i++)
+    {
+        
+        Eigen::Vector2d reprojected_pixel = Eigen::Vector2d::Zero();
+        Eigen::Vector3d xyz_point = Eigen::Vector3d(xyz.coeff(0,i),xyz.coeff(1,i),xyz.coeff(2,i));
+        
+        // ROS_INFO_STREAM("Before: "<<reprojected_pixel);
+        switch(cam_model_type_)
+        {
+            case CamType::noncentralgeneric: 
+            {
+                // NoncentralGenericCamera<double>* camera_casted_ = static_cast<NoncentralGenericCamera<double>*>(camera_);
+                auto camera_casted = std::static_pointer_cast<NoncentralGenericCamera<double>>(camera_);
+                bool in_frame = camera_casted->Project(xyz_point,&reprojected_pixel);
+
+                break;
+            }
+            case CamType::centralgeneric: 
+            {
+                auto camera_casted = std::static_pointer_cast<CentralGenericCamera<double>>(camera_);
+                bool in_frame = camera_casted->Project(xyz_point,&reprojected_pixel);
+                break;
+            }
+        }
+
+        // ROS_INFO_STREAM("After: "<<reprojected_pixel);
+
+        ux[i] = static_cast<float>(reprojected_pixel.x());
+        uy[i] = static_cast<float>(reprojected_pixel.y());
+        
+        // ROS_INFO_STREAM("xyz point:" << xyz_point);
+        // ROS_INFO_STREAM("In frame: " <<in_frame);
+
+    }    
 
     // Convert uxuy to cv::Mat.
     // // The following may cause a memory error since ux and uy will be destroyed
@@ -400,8 +419,7 @@ void FisheyeResampler<CameraModel_t>::get_remap_coordinates() {
     cv::Mat( out_shape.h, out_shape.w, CV_32FC1, uy.data() ).copyTo(yy);
 }
 
-template < typename CameraModel_t >
-void FisheyeResampler<CameraModel_t>::setData(cv_bridge::CvImagePtr _cv_ptr) {
+void FisheyeResampler::setData(cv_bridge::CvImagePtr _cv_ptr) {
     VPIProcessor::setData(_cv_ptr);
  
     if (active_height != 0 || active_width != 0) {
@@ -419,8 +437,7 @@ void FisheyeResampler<CameraModel_t>::setData(cv_bridge::CvImagePtr _cv_ptr) {
     active_height = _cv_ptr->image.rows;
 }
 
-template < typename CameraModel_t >
-void FisheyeResampler<CameraModel_t>::vpi_submit() {
+void FisheyeResampler::vpi_submit() {
     // Extract.
     vpiSubmitRemap( stream, backendType, v_warp, vImage, v_out_image, VPI_INTERP_LINEAR, VPI_BORDER_ZERO, 0 );
 
@@ -443,6 +460,13 @@ void FisheyeResampler<CameraModel_t>::vpi_submit() {
     pub_resampled.publish( img_bridge.toImageMsg() );
 
     vpiImageUnlock(v_out_image);
+
+    // save images if configure
+    if (save_imgs)
+    {
+        cv::imwrite(output_dir+std::to_string(img_counter)+".png",out_ocv);
+        img_counter++;
+    }
 }
 
 } // namespace mvs
@@ -459,13 +483,14 @@ int main(int argc, char** argv) {
     GET_PARAM_DEFAULT(int,         cam_idx,   0,            nh_private_)
     GET_PARAM_DEFAULT(std::string, out_size, "300, 200",    nh_private_) // Width, height.
     GET_PARAM_DEFAULT(std::string, out_fov,  "90, 40",      nh_private_) // x, y.
+    GET_PARAM_DEFAULT(std::string, rotations,  "0, 0",    nh_private_) // x, y.
     GET_PARAM_DEFAULT(std::string, output_dir,  "None",      nh_private_)
-
+    GET_PARAM_DEFAULT(std::string, cam_model_type,"centralgeneric",nh_private_)
     // Find calibration file name to use when publishing
     std::string topic_name("");
     std::string character;
     bool found_point = false;
-    for (int i = calib_fn.length()-1; i>=0; i--)s
+    for (int i = calib_fn.length()-1; i>=0; i--)
     {
         character = calib_fn[i];
         if (character.compare("/") == 0)
@@ -481,44 +506,56 @@ int main(int argc, char** argv) {
             found_point = true;
         }
     }
+
     reverse(topic_name.begin(),topic_name.end());
 
     auto v_out_size = extract_number_from_string<int>( out_size, 2 );
     auto v_out_fov  = extract_number_from_string<double>( out_fov, 2 );
+    auto v_rotations= extract_number_from_string<double>( rotations,2);
+
 
     VPIContext ctx;
     vpiContextCreate(0, &ctx);
     vpiContextSetCurrent(ctx);
 
     // Create the resampler.
-    mvs::FisheyeResampler<mvs::DoubleSphere> resampler(nh_, nh_private_);
-
+    mvs::FisheyeResampler resampler(nh_, nh_private_);
+    
+    resampler.set_camera_type(cam_model_type);
     // Read the camera calibration file.
-    std::vector<mvs::DoubleSphere> cameras = read_cameras( calib_fn );
-    for ( const auto& camera : cameras )
-        std::cout << camera << "\n";
+    resampler.read_camera( calib_fn );
 
-    if ( cam_idx >= cameras.size() || cam_idx < 0 ) {
-        ROS_ERROR_STREAM("Wrong cam_idx = " << cam_idx);
-        return -1;
-    }
+    // resampler.set_camera_model( camera );
 
-    resampler.set_camera_model( &cameras[0] );
 
     // Set output dimensions.
     resampler.set_out_shape( { v_out_size[1], v_out_size[0] } ); // H, W.
     resampler.set_out_fov( v_out_fov[0], v_out_fov[1] ); // x, y.
-
+    
     if (output_dir.compare("None") != 0)
     {
         resampler.set_img_output_dir(output_dir);
     }
-    
+
     // Set re-sample rotation.
-    Eigen::Matrix3f rot_mat = Eigen::Matrix3f::Zero();
-    rot_mat(0, 0) = 1;
-    rot_mat(1, 1) = 1;
-    rot_mat(2, 2) = 1;
+    Eigen::Matrix3f rot_mat_x = Eigen::Matrix3f::Zero();
+    double rot_x = v_rotations[0]/180*PI;
+    rot_mat_x(0, 0) = 1;
+    rot_mat_x(1,1) = std::cos(rot_x);
+    rot_mat_x(1,2) = -std::sin(rot_x);
+    rot_mat_x(2,1) = std::sin(rot_x);
+    rot_mat_x(2,2) = std::cos(rot_x);	
+
+    Eigen::Matrix3f rot_mat_z = Eigen::Matrix3f::Zero();
+    double rot_z = v_rotations[1]/180*PI;
+    rot_mat_z(0, 0) = std::cos(rot_z);
+    rot_mat_z(0,1) = -std::sin(rot_z);
+    rot_mat_z(1,0) = std::sin(rot_z);
+    rot_mat_z(1,1) = std::cos(rot_z);
+    rot_mat_z(2,2) = 1.0;		
+
+    Eigen::Matrix3f rot_mat = rot_mat_z*rot_mat_x;
+
 
     resampler.set_rotation(rot_mat);
 
@@ -531,7 +568,7 @@ int main(int argc, char** argv) {
 
     // Create the subscriber.
     GET_PARAM_DEFAULT(std::string, in_topic, "/camera_0/image_raw", nh_private_)
-    resampler.sub_fisheye = nh_.subscribe(in_topic, resampler.PUB_BUF_LEN, &mvs::FisheyeResampler<mvs::DoubleSphere>::imageCallback, &resampler);
+    resampler.sub_fisheye = nh_.subscribe(in_topic, resampler.PUB_BUF_LEN, &mvs::FisheyeResampler::imageCallback, &resampler);
 
     // Create the publisher.
     GET_PARAM_DEFAULT(std::string, out_topic, "/fisheye_resampler_0/"+topic_name, nh_private_)

@@ -44,6 +44,8 @@ std::ostream& operator << ( std::ostream& os, const Shape_t& shape ) {
 
 } // namespace mvs
 
+
+
 CameraModel::CameraModel(const std::string& name, float fx, float fy, float cx, float cy, const Shape_t& shape)
 : name(name), fx(fx), fy(fy), cx(cx), cy(cy), shape(shape) 
 {
@@ -52,8 +54,11 @@ CameraModel::CameraModel(const std::string& name, float fx, float fy, float cx, 
     extrinsics = TransformMat::Identity();
 }
 
+
+
 CameraModel::~CameraModel()
 {}
+
 
 std::string CameraModel::string() const {
     std::stringstream ss;

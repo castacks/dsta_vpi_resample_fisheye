@@ -26,6 +26,7 @@ TransformMat inverse_transform( const TransformMat& T );
 Quat ypr_2_quat(float y, float p, float r);
 
 struct Shape_t {    
+    Shape_t(){}
     Shape_t(int H, int W)
     : h(H), w(W), mat{w, h}
     {}
@@ -55,7 +56,7 @@ public:
         LINEAR,
         NEAREST
     };
-
+    CameraModel(){} 
     CameraModel(const std::string& name, float fx, float fy, float cx, float cy, const Shape_t& shape);
     virtual ~CameraModel();
 

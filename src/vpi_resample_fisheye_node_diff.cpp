@@ -1,7 +1,5 @@
-#ifdef USE_BACKWARD
+
 #define BACKWARD_HAS_DW 1
-#include <backward.hpp>
-#endif
 
 // C++ std.
 // #include <filesystem> // Not supported by GCC 7.
@@ -33,13 +31,6 @@
 // #include <vpi/OpenCVInterop.hpp>
 // #include <vpi/Stream.h>
 #include <vpi/WarpMap.h> // Not included in vpi_processor.h
-
-
-#ifdef WITH_OCV_VIZ
-#include <opencv2/viz.hpp>
-#endif
-#include <opencv2/core/eigen.hpp>
-
 // #include <vpi/algo/Remap.h>
 
 // Other workspace packages.
@@ -110,94 +101,35 @@ mvs::PointMat3 get_xyz(double fov_x, double fov_y, const mvs::Shape_t& shape) {
     typedef mvs::PointMat3::Scalar Scalar_t;
 
     const int N = shape.size();
-        // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
+    
+    // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
     mvs::PointMat1 ax = 
-        mvs::PointMat1::LinSpaced(shape.w, 0, 1) * static_cast<Scalar_t>( fov_x / 180 * PI );
+        mvs::PointMat1::LinSpaced(shape.w, -1, 1) * static_cast<Scalar_t>( tan(fov_x / 2.0 / 180 * PI) );
     mvs::PointMat1 ay = 
-        mvs::PointMat1::LinSpaced(shape.h, 1, 0) * static_cast<Scalar_t>( fov_y / 2.0/ 180 * PI );
+        mvs::PointMat1::LinSpaced(shape.h, -1, 1) * static_cast<Scalar_t>( tan(fov_y / 2.0 / 180 * PI) );
 
     // The xyz coordinates of pixels in the pinhole camera.
     mvs::PointMat3 xyz;
     xyz.resize( 3, N );
 
     xyz.row(0) = 
-        ay.array().sin().matrix().replicate( 1, shape.h );
-    xyz.row(0) = xyz.row(0)* (ax.array().cos().matrix().replicate( 1,shape.h )).asDiagonal() ;
-
+        ax.array().matrix().replicate( 1, shape.h );
     // Eigen 3.4.
     // xyz.row(1) = 
     //     ay.array().tan().matrix().replicate( shape.w, 1 ).reshaped(1, N);
 
     // Eigen 3.3.
     Eigen::Matrix<Scalar_t, Eigen::Dynamic, Eigen::Dynamic> temp_row = 
-        ay.array().sin().matrix().replicate( shape.w, 1 );
+        ay.array().matrix().replicate( shape.w, 1 );
     xyz.row(1) = Eigen::Map<Eigen::Matrix<Scalar_t, 1, Eigen::Dynamic>>( 
         temp_row.data(), 1, N
     );
-    xyz.row(1) = xyz.row(1)*(ax.array().sin().matrix().replicate( 1,shape.h )).asDiagonal();
-    // xyz.row(2) = mvs::PointMat1::Ones(1, N);
-    xyz.row(2) =  (ay.array().cos().matrix().replicate( 1, shape.h )); // z= r*cos(theta)
-
-    Eigen::Matrix<float, 3, -1> xyz_copy = xyz;
     
-    cv::Mat opencv_3d_points;
-    cv::eigen2cv(xyz_copy,opencv_3d_points);
-
-#ifdef WITH_OCV_VIZ
-    cv::viz::Viz3d window;
-    window.showWidget("coordinate", cv::viz::WCoordinateSystem(100));
-    window.showWidget("points", cv::viz::WCloud(opencv_3d_points, cv::viz::Color::green()));
-    window.spin();
-#endif
-
-    // xyz.row(2) = xyz.row(2)* (ay.array().cos().matrix().replicate( shape.w, 1 )).asDiagonal() ;
-    
-    // // Angle values associated with the x and y pixel coordinates in the final pinhole camera.
-    // mvs::PointMat1 ax = 
-    //     mvs::PointMat1::LinSpaced(shape.w, -1, 1) * static_cast<Scalar_t>( (fov_x / 2.0 / 180 * PI) );
-    // mvs::PointMat1 ay = 
-    //     mvs::PointMat1::LinSpaced(shape.h, -1, 1) * static_cast<Scalar_t>( (fov_y / 2.0 / 180 * PI) );
-
-    // // The xyz coordinates of pixels in the pinhole camera.
-    // // using spherical coordinate systems, with theta the angle w.r.t. fov_y and psi w.r.t. fov_x:
-    // // x = r*sin(psi)*sin(theta)
-    // // y = r*cos(psi)*sin(theta)
-    // // z = r*cos(theta)
-
-
-    // mvs::PointMat3 xyz;
-    // xyz.resize( 3, N );
-    
-    // xyz.row(0) = 
-    //     ax.array().sin().matrix().replicate( 1, shape.h );
-    // xyz.row(0) = xyz.row(0)* (ay.array().cos().matrix().replicate( shape.w, 1 )).asDiagonal() ;
-    // // Eigen 3.4.
-    // Eigen::Matrix<Scalar_t, Eigen::Dynamic, Eigen::Dynamic> temp_row = 
-    //     ay.array().sin().matrix().replicate( shape.w, 1 );
-    // xyz.row(1) = Eigen::Map<Eigen::Matrix<Scalar_t, 1, Eigen::Dynamic>>( 
-    //     temp_row.data(), 1, N);
-
-    // temp_row = 
-    //     ay.array().cos().matrix().replicate( shape.w, 1 );
-    // xyz.row(2) = Eigen::Map<Eigen::Matrix<Scalar_t, 1, Eigen::Dynamic>>( 
-    //     temp_row.data(), 1, N);
-    // xyz.row(2) = xyz.row(2)*(ax.array().cos().matrix().replicate( 1, shape.h )).asDiagonal();
-
-    // xyz.row(1) = 
-    //     ay.array().sin().matrix().replicate( shape.w, 1 );
-
-    // // Eigen 3.3.
-    // Eigen::Matrix<Scalar_t, Eigen::Dynamic, Eigen::Dynamic> temp_row = 
-    //     ay.array().sin().matrix().replicate( shape.w, 1 );
-    // xyz.row(1) = (ay.array().sin().matrix().replicate( shape.w, 1 ));
-    // xyz.row(1) = xyz.row(1)* (ay.array().cos().matrix().replicate( shape.w,  )).asDiagonal() ;
-    // xyz.row(2) =  (ax.array().cos().matrix().replicate( 1, shape.h )); // z= r*cos(theta)
-    // xyz.row(2) = xyz.row(2)* (ay.array().cos().matrix().replicate( shape.w, 1 )).asDiagonal() ;
-
-    // xyz.row(2) = mvs::PointMat1::Ones(1, N);
+    xyz.row(2) = mvs::PointMat1::Ones(1, N);
     // xyz.row(2).setZero();
     // xyz.row(2) = (mvs::PointMat1::Ones(1, N)- xyz.colwise().squaredNorm());
-    // xyz.row(2) = xyz.row(2).array().sqrt();
+    // xyz.row(2) = xyz.row(2).colwise().norm();
+
 
     return xyz;
 }
@@ -234,6 +166,8 @@ public:
         publishROS = true;
         active_width  = 0;
         active_height = 0;
+
+
     }
 
     ~FisheyeResampler() {
@@ -246,12 +180,13 @@ public:
             ROS_WARN_STREAM("Resampler not ready yet. ");
             return;
         }
+
         cv_bridge::CvImagePtr _cv_ptr = cv_bridge::toCvCopy(msg, msg->encoding);
         processImage(_cv_ptr);
     }
 
     void set_camera_model(CameraModel_t* pCM) { p_cam_model = pCM; }
-    void set_img_output_dir(std::string output_dir_requested){save_imgs = true; output_dir = output_dir_requested;}
+    void set_img_output_dir(std::string output_dir_requested){save_imgs = true; output_dir = output_dir_requested; }
     void set_out_shape(const Shape_t& shape) { out_shape = shape; }
     void set_out_fov(double fov_x, double fov_y) {
         out_fov_x = fov_x;
@@ -443,6 +378,13 @@ void FisheyeResampler<CameraModel_t>::vpi_submit() {
     pub_resampled.publish( img_bridge.toImageMsg() );
 
     vpiImageUnlock(v_out_image);
+
+    // save images if configure
+    if (save_imgs)
+    {
+        cv::imwrite(output_dir+std::to_string(img_counter)+".png",out_ocv);
+        img_counter++;
+    }
 }
 
 } // namespace mvs
@@ -459,13 +401,13 @@ int main(int argc, char** argv) {
     GET_PARAM_DEFAULT(int,         cam_idx,   0,            nh_private_)
     GET_PARAM_DEFAULT(std::string, out_size, "300, 200",    nh_private_) // Width, height.
     GET_PARAM_DEFAULT(std::string, out_fov,  "90, 40",      nh_private_) // x, y.
+    GET_PARAM_DEFAULT(std::string, rotations,  "0, 0",    nh_private_) // x, y.
     GET_PARAM_DEFAULT(std::string, output_dir,  "None",      nh_private_)
-
     // Find calibration file name to use when publishing
     std::string topic_name("");
     std::string character;
     bool found_point = false;
-    for (int i = calib_fn.length()-1; i>=0; i--)s
+    for (int i = calib_fn.length()-1; i>=0; i--)
     {
         character = calib_fn[i];
         if (character.compare("/") == 0)
@@ -485,6 +427,8 @@ int main(int argc, char** argv) {
 
     auto v_out_size = extract_number_from_string<int>( out_size, 2 );
     auto v_out_fov  = extract_number_from_string<double>( out_fov, 2 );
+    auto v_rotations= extract_number_from_string<double>( rotations,2);
+
 
     VPIContext ctx;
     vpiContextCreate(0, &ctx);
@@ -508,17 +452,31 @@ int main(int argc, char** argv) {
     // Set output dimensions.
     resampler.set_out_shape( { v_out_size[1], v_out_size[0] } ); // H, W.
     resampler.set_out_fov( v_out_fov[0], v_out_fov[1] ); // x, y.
-
+    
     if (output_dir.compare("None") != 0)
     {
         resampler.set_img_output_dir(output_dir);
     }
-    
+
     // Set re-sample rotation.
-    Eigen::Matrix3f rot_mat = Eigen::Matrix3f::Zero();
-    rot_mat(0, 0) = 1;
-    rot_mat(1, 1) = 1;
-    rot_mat(2, 2) = 1;
+    Eigen::Matrix3f rot_mat_x = Eigen::Matrix3f::Zero();
+    double rot_x = v_rotations[0]/180*PI;
+    rot_mat_x(0, 0) = 1;
+    rot_mat_x(1,1) = std::cos(rot_x);
+    rot_mat_x(1,2) = -std::sin(rot_x);
+    rot_mat_x(2,1) = std::sin(rot_x);
+    rot_mat_x(2,2) = std::cos(rot_x);	
+
+    Eigen::Matrix3f rot_mat_z = Eigen::Matrix3f::Zero();
+    double rot_z = v_rotations[1]/180*PI;
+    rot_mat_z(0, 0) = std::cos(rot_z);
+    rot_mat_z(0,1) = -std::sin(rot_z);
+    rot_mat_z(1,0) = std::sin(rot_z);
+    rot_mat_z(1,1) = std::cos(rot_z);
+    rot_mat_z(2,2) = 1.0;		
+
+    Eigen::Matrix3f rot_mat = rot_mat_z*rot_mat_x;
+
 
     resampler.set_rotation(rot_mat);
 

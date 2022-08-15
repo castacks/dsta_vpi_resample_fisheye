@@ -6,7 +6,7 @@ project(vpi_resample_fisheye)
 
 set(CMAKE_CXX_STANDARD 17)
 
-option(USE_BACKWORD "Use the Backword package" OFF)
+option(USE_BACKWARD "Enable Backward package for debugging" OFF)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -20,8 +20,8 @@ find_package(catkin REQUIRED COMPONENTS
   vpi_ros
 )
 
-find_package(Eigen3 REQUIRED)
 ## System dependencies are found with CMake's conventions
+find_package(Eigen3 REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system filesystem)
 find_package(vpi REQUIRED)
 find_package(OpenCV REQUIRED)
@@ -38,9 +38,9 @@ find_package(yaml-cpp REQUIRED)
 
 if(USE_BACKWORD)
   find_package(Backward REQUIRED)
-  set(BACKWORD_LIBS Backward::Backward)
+  set(BACKWARD_LIBS Backward::Backward)
 else()
-  set(BACKWORD_LIBS )
+  set(BACKWARD_LIBS)
 endif()
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -164,6 +164,8 @@ add_library(${LIB_RESAMPLE}
 # The recommended prefix ensures that target names across packages don't collide
 add_executable(${PROJECT_NAME}_node src/vpi_resample_fisheye_node.cpp)
 
+add_executable(${PROJECT_NAME}_node_generic src/vpi_resample_fisheye_node_generic.cpp)
+
 add_executable(${PROJECT_NAME}_node_no_fancy src/vpi_resample_no_fancy.cpp)
 
 add_executable(${PROJECT_NAME}_node_angle src/vpi_angle_fisheye_node.cpp)
@@ -183,10 +185,19 @@ add_executable(${PROJECT_NAME}_node_angle src/vpi_angle_fisheye_node.cpp)
 target_link_libraries(${LIB_RESAMPLE}
     yaml-cpp
     Eigen3::Eigen
-    ${OpenCV_LIBRARIES}
-    )
+    ${OpenCV_LIBRARIES})
 
 target_link_libraries(${PROJECT_NAME}_node
+  ${catkin_LIBRARIES}
+  ${Boost_SYSTEM_LIBRARY}
+  ${Boost_FILESYSTEM_LIBRARY}
+  vpi 
+  ${OpenCV_LIBRARIES}
+  Eigen3::Eigen
+  ${LIB_RESAMPLE}
+)
+
+target_link_libraries(${PROJECT_NAME}_node_generic
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
   ${Boost_SYSTEM_LIBRARY}
@@ -194,7 +205,6 @@ target_link_libraries(${PROJECT_NAME}_node
   vpi 
   Eigen3::Eigen
   ${LIB_RESAMPLE}
-  ${BACKWORD_LIBS}
 )
 
 target_link_libraries(${PROJECT_NAME}_node_no_fancy
@@ -205,9 +215,8 @@ target_link_libraries(${PROJECT_NAME}_node_no_fancy
   ${OpenCV_LIBRARIES}
   Eigen3::Eigen
   ${LIB_RESAMPLE}
-  ${BACKWORD_LIBS}
+  ${BACKWARD_LIBS}
 )
-
 
 target_link_libraries(${PROJECT_NAME}_node_angle
   ${catkin_LIBRARIES}
